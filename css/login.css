@@ -8,3 +8,11 @@
 	align-items: center;
 
 }
+
+#password2 {
+	display: none;
+}
+
+.input-content .row {
+	margin-bottom: 0px;
+}
