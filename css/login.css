@@ -9,6 +9,10 @@
 
 }
 
+
+#name {
+	display: none;
+}
 #password2 {
 	display: none;
 }
