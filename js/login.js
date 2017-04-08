@@ -14,45 +14,71 @@
 
 
 	$("#login").click(function(){
+		loginFunction();
+	})
+
+	$("#register").click(function(){
+		registerFunction();
+	})
+
+	$("#loginGoogle").click(function(){
+		loginGoogleFunction();
+	})
 
 
+
+
+
+
+
+	var loginFunction = function(){
 		var emailInput = $("#emailInput").val();
 		var passwordInput = $("#passwordInput").val();
-
-		console.log([emailInput, passwordInput]);
 
 
 		var trySignIn = firebase.auth().signInWithEmailAndPassword(emailInput, passwordInput);
 
 		trySignIn.then(function(auth){
-			alert("Conseugi logar");
+			console.log("Conseugi logar");
 		}, function(error){
-			alert("Não conseugi logar");
+			console.log("Não conseugi logar");
 		});
-	})
-
-	$("#register").click(function(){
-
-
+	}
+	var registerFunction = function(){
 		var emailInput = $("#emailInput").val();
 		var passwordInput = $("#passwordInput").val();
-
-		console.log([emailInput, passwordInput]);
 
 		firebase.auth()
 		.createUserWithEmailAndPassword(emailInput, passwordInput)
 		.then(function(user){
 			// Already registrated, just have to login
-			// loginCtrl.signingUp = false;
-			// loginCtrl.login();
-			alert("registrated");
+			loginFunction();
+			console.log("registrated");
 		},function(error){
 			if(error.code == 'auth/email-already-in-use')
-				alert("O email escolhido já esta em uso");
+				console.log("O email escolhido já esta em uso");
 			else
-				alert("Não consegui realizar o cadastro, por favor tente novamente");
+				console.log("Não consegui realizar o cadastro, por favor tente novamente");
 		})
-	})
+	}	
+
+	var loginGoogleFunction = function(){
+		var provider = new firebase.auth.GoogleAuthProvider();
+
+  		var tryGoogleSignIn = firebase.auth().signInWithPopup(provider);
+
+  		tryGoogleSignIn.then(function(result) {
+		  	// This gives you a Google Access Token. You can use it to access the Google API.
+		  	var token = result.credential.accessToken;
+		  	// The signed-in user info.
+		  	user = result.user;
+		  	console.log("loguei com o Google");
+
+		}).catch(function(error){
+		  	console.log("nao consegui");
+		  	console.log(error);
+		});
+	}
 
 
 
