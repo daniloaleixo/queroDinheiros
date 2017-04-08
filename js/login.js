@@ -47,19 +47,27 @@
 	var registerFunction = function(){
 		var emailInput = $("#emailInput").val();
 		var passwordInput = $("#passwordInput").val();
+		var password2Input = $("#password2Input").val();
 
-		firebase.auth()
-		.createUserWithEmailAndPassword(emailInput, passwordInput)
-		.then(function(user){
-			// Already registrated, just have to login
-			loginFunction();
-			console.log("registrated");
-		},function(error){
-			if(error.code == 'auth/email-already-in-use')
-				console.log("O email escolhido já esta em uso");
-			else
-				console.log("Não consegui realizar o cadastro, por favor tente novamente");
-		})
+		if(password2Input != passwordInput){
+			alert("senhas devem ser iguais");
+		} else {
+
+			firebase.auth()
+			.createUserWithEmailAndPassword(emailInput, passwordInput)
+			.then(function(user){
+				// Already registrated, just have to login
+				loginFunction();
+				console.log("registrated");
+			},function(error){
+				if(error.code == 'auth/email-already-in-use')
+					console.log("O email escolhido já esta em uso");
+				else
+					console.log("Não consegui realizar o cadastro, por favor tente novamente");
+			})
+
+		}
+
 	}	
 
 	var loginGoogleFunction = function(){
