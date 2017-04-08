@@ -33,31 +33,31 @@
 			to register form -->
 		    <form class="col s12">
 			    <div class="input-content">
-			    	<div id="name" class="row register-form">
+			    	<div class="row register-form">
 			    	    <div class="input-field col s12">
 			    	      	<!-- <i class="material-icons prefix">phone</i> -->
-			    	      	<input id="icon_telephone" type="text" class="validate">
+			    	      	<input id="nameInput" type="text" class="validate">
 			    	      	<label for="icon_telephone">Nome</label>
 			    	    </div>
 			    	</div>
 				    <div class="row" style="margin-bottom: 0px;">
 				        <div class="input-field col s12">
 				          	<!-- <i class="material-icons prefix">account_circle</i> -->
-				          	<input id="icon_prefix" type="email" class="validate">
+				          	<input id="emailInput" type="email" class="validate">
 				          	<label for="icon_prefix">Email</label>
 				        </div>
 				    </div>
 				    <div class="row" style="margin-bottom: 0px;">
 				        <div class="input-field col s12">
 				          	<!-- <i class="material-icons prefix">phone</i> -->
-				          	<input id="icon_telephone" type="password" class="validate">
+				          	<input id="passwordInput" type="password" class="validate">
 				          	<label for="icon_telephone">Password</label>
 				        </div>
 				    </div>
-				    <div id="password2" class="row register-form">
+				    <div class="row register-form">
 				        <div class="input-field col s12">
 				          	<!-- <i class="material-icons prefix">phone</i> -->
-				          	<input id="icon_telephone" type="password" class="validate">
+				          	<input id="password2Input" type="password" class="validate">
 				          	<label for="icon_telephone">Repeat your Password</label>
 				        </div>
 				    </div>
@@ -67,13 +67,13 @@
 
 			    <div class="row login-form">
 			    	<div class="col s12">
-			    		<a class="waves-effect waves-light btn btn-block"
+			    		<a id="login" class="waves-effect waves-light btn btn-block"
 			    			style="width: 100%">Login</a>
 			    	</div>
 			    </div>
 			    <div class="row register-form">
 			    	<div class="col s12">
-			    		<a class="waves-effect waves-light btn btn-block"
+			    		<a id="register" class="waves-effect waves-light btn btn-block"
 			    			style="width: 100%">Registrar</a>
 			    	</div>
 			    </div>
@@ -101,6 +101,22 @@
   	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   	<script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
   	<script type="text/javascript" src="js/login.js"></script>
+
+
+  	<!-- Firebase -->
+  	<script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+  	<script>
+  	  // Initialize Firebase
+  	  var config = {
+  	    apiKey: "AIzaSyCi-a5Wx0E3RHxpyBparukydEpVYQ7BR-Q",
+  	    authDomain: "quero-dinheiros.firebaseapp.com",
+  	    databaseURL: "https://quero-dinheiros.firebaseio.com",
+  	    projectId: "quero-dinheiros",
+  	    storageBucket: "quero-dinheiros.appspot.com",
+  	    messagingSenderId: "727342562932"
+  	  };
+  	  firebase.initializeApp(config);
+  	</script>
 
 </body>
 </html>
