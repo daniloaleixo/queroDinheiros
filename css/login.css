@@ -10,12 +10,11 @@
 }
 
 
-#name {
+.register-form {
 	display: none;
 }
-#password2 {
-	display: none;
-}
+
+
 
 .input-content .row {
 	margin-bottom: 0px;

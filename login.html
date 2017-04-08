@@ -27,9 +27,13 @@
 		</div>
 		<div class="row">
 
+
+		<!-- There are two forms, one will be the register and the other the login form
+			The idea is that when the user clicks "I don't have an account" the form switches
+			to register form -->
 		    <form class="col s12">
 			    <div class="input-content">
-			    	<div id="name" class="row">
+			    	<div id="name" class="row register-form">
 			    	    <div class="input-field col s12">
 			    	      	<!-- <i class="material-icons prefix">phone</i> -->
 			    	      	<input id="icon_telephone" type="text" class="validate">
@@ -50,7 +54,7 @@
 				          	<label for="icon_telephone">Password</label>
 				        </div>
 				    </div>
-				    <div id="password2" class="row">
+				    <div id="password2" class="row register-form">
 				        <div class="input-field col s12">
 				          	<!-- <i class="material-icons prefix">phone</i> -->
 				          	<input id="icon_telephone" type="password" class="validate">
@@ -61,10 +65,16 @@
 			    <!-- Divider -->
 			    <div style="margin-top:50px;"></div>
 
-			    <div class="row">
+			    <div class="row login-form">
 			    	<div class="col s12">
 			    		<a class="waves-effect waves-light btn btn-block"
 			    			style="width: 100%">Login</a>
+			    	</div>
+			    </div>
+			    <div class="row register-form">
+			    	<div class="col s12">
+			    		<a class="waves-effect waves-light btn btn-block"
+			    			style="width: 100%">Registrar</a>
 			    	</div>
 			    </div>
 			    <div class="row">
@@ -75,8 +85,8 @@
 			    </div>
 			    <div class="row">
 			    	<div class="col s12">
-			    		<a>Ainda não possui uma conta?</a>
-		    			<a style="display:none">Já possui uma conta?</a>
+			    		<a class="login-form">Ainda não possui uma conta?</a>
+		    			<a class="register-form">Já possui uma conta?</a>
 			    	</div>
 			    </div>
 		    		
