@@ -40,10 +40,8 @@
 
 		trySignIn.then(function(auth){
 			console.log("Conseugi logar");
+			setCookies(auth);
 			// window.location.replace("https://gutomotta.github.io/querodinheiros/");
-			cookieHandler.setCookie("uid", auth.uid, 30);
-			var x = cookieHandler.getCookie("uid");
-			console.log(x);
 		}, function(error){
 			console.log("Não conseugi logar");
 		});
@@ -84,13 +82,32 @@
 		  	var token = result.credential.accessToken;
 		  	// The signed-in user info.
 		  	user = result.user;
+
 		  	console.log("loguei com o Google");
-		  	window.location.replace("https://gutomotta.github.io/querodinheiros/");
+		  	setCookies(user);
+		  	// window.location.replace("https://gutomotta.github.io/querodinheiros/");
 
 		}).catch(function(error){
 		  	console.log("nao consegui");
 		  	console.log(error);
 		});
+	}
+
+	// Get the auth object and put the right cookies for it
+	var setCookies = function(auth){
+		cookieHandler.setCookie("uid", auth.uid, 30);
+
+		cookieHandler.setCookie("email", auth.email, 30);
+
+		if(auth.displayName) cookieHandler.setCookie("displayName", auth.displayName, 30);
+		else cookieHandler.setCookie("displayName", auth.email, 30); // Put the email if do not have name
+
+		if(auth.photoURL) cookieHandler.setCookie("photoURL", auth.photoURL, 30);
+		else {
+			cookieHandler.setCookie("displayName", 
+			"https://firebasestorage.googleapis.com/v0/b/quero-dinheiros.appspot.com/o/null-avatar.png?alt=media&token=6a674e5e-c7af-4e22-8fe7-630fb1236518", 
+			30); // Put the dumb image url
+		}
 	}
 
 
