@@ -40,7 +40,10 @@
 
 		trySignIn.then(function(auth){
 			console.log("Conseugi logar");
-			window.location.replace("https://gutomotta.github.io/querodinheiros/");
+			// window.location.replace("https://gutomotta.github.io/querodinheiros/");
+			cookieHandler.setCookie("uid", auth.uid, 30);
+			var x = cookieHandler.getCookie("uid");
+			console.log(x);
 		}, function(error){
 			console.log("Não conseugi logar");
 		});
