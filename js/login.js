@@ -40,6 +40,7 @@
 
 		trySignIn.then(function(auth){
 			console.log("Conseugi logar");
+			window.location.replace("https://gutomotta.github.io/querodinheiros/");
 		}, function(error){
 			console.log("Não conseugi logar");
 		});
@@ -81,6 +82,7 @@
 		  	// The signed-in user info.
 		  	user = result.user;
 		  	console.log("loguei com o Google");
+		  	window.location.replace("https://gutomotta.github.io/querodinheiros/");
 
 		}).catch(function(error){
 		  	console.log("nao consegui");
