@@ -1,6 +1,6 @@
 
 //module.exports = {
-var cookieHandler = {
+var CookieHandler = {
     setCookie: function(cookieName, cookieValue, expirationDays) {
         var d = new Date();
         d.setTime(d.getTime() + (expirationDays*24*60*60*1000));
@@ -27,15 +27,20 @@ var cookieHandler = {
     },
 
     checkCookie: function() {
-        var username = getCookie("username");
-        
-        if (username != "") {
-            alert("Welcome again " + username);
+        console.log("Checking cookie");
+        var uid = this.getCookie("uid");
+            
+        if (uid != "") {
+            var user = { 
+                "uid": uid,
+                "email": this.getCookie("email"),
+                "displayName": this.getCookie("displayName"),
+                "photoURL": this.getCookie("photoURL")
+            };
+            return user;
         } else {
-            username = prompt("Please enter your name:", "");
-            if (username != "" && username != null) {
-                setCookie("username", username, 365);
-            }
+            window.location.replace("https://gutomotta.github.io/querodinheiros/login");
+            return false;
         }
     }
 }
