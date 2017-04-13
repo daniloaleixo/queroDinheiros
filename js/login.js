@@ -2,30 +2,39 @@
 
 (function($){
 
-	$("#switchToRegisterForm").click(function(){
-		$(".register-form").css("display", "block");
-		$(".login-form").css("display", "none");
-	})
 
-	$("#switchToLoginForm").click(function(){
-		$(".register-form").css("display", "none");
-		$(".login-form").css("display", "block");
-	})
+	// When document is ready, check for the user
+	$(document).ready(function() {
+	    
+	    console.log( "login ready!" );
 
+	    $("#switchToRegisterForm").click(function(){
+	    	$(".register-form").css("display", "block");
+	    	$(".login-form").css("display", "none");
+	    })
 
-	$("#login").click(function(){
-		loginFunction();
-	})
-
-	$("#register").click(function(){
-		registerFunction();
-	})
-
-	$("#loginGoogle").click(function(){
-		loginGoogleFunction();
-	})
+	    $("#switchToLoginForm").click(function(){
+	    	$(".register-form").css("display", "none");
+	    	$(".login-form").css("display", "block");
+	    })
 
 
+	    $("#login").click(function(){
+	    	loginFunction();
+	    })
+
+	    $("#register").click(function(){
+	    	registerFunction();
+	    })
+
+	    $("#loginGoogle").click(function(){
+	    	loginGoogleFunction();
+	    })
+
+
+
+	});
+	
 
 
 
@@ -34,12 +43,13 @@
 	var loginFunction = function(){
 		var emailInput = $("#emailInput").val();
 		var passwordInput = $("#passwordInput").val();
+		console.log("Tentando logar");
 
 
 		var trySignIn = firebase.auth().signInWithEmailAndPassword(emailInput, passwordInput);
 
 		trySignIn.then(function(auth){
-			console.log("Conseugi logar");
+			console.log("Consegui logar");
 			setCookies(auth);
 			window.location.replace("https://gutomotta.github.io/querodinheiros/");
 		}, function(error){
@@ -73,6 +83,7 @@
 	}	
 
 	var loginGoogleFunction = function(){
+		console.log("Tentando logar");
 		var provider = new firebase.auth.GoogleAuthProvider();
 
   		var tryGoogleSignIn = firebase.auth().signInWithPopup(provider);
@@ -88,7 +99,7 @@
 		  	window.location.replace("https://gutomotta.github.io/querodinheiros/");
 
 		}).catch(function(error){
-		  	console.log("nao consegui");
+		  	console.log("nao consegui logar com o Google");
 		  	console.log(error);
 		});
 	}
