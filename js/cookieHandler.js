@@ -39,7 +39,6 @@ var CookieHandler = {
             };
             return user;
         } else {
-            window.location.replace("https://gutomotta.github.io/querodinheiros/login");
             return false;
         }
     }
