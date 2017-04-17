@@ -1,0 +1,45 @@
+{
+	"CpLSvM5t9lTDbMyydika4Cdq4Ek1":{
+		"2015":{
+			"Mar":{
+				"debts":[
+					{
+						"description":"Kindle",
+						"amount":"100",
+						"tags":["compras"]
+					},
+					{
+						"description":"Bacio di Latte",
+						"amount":"25.50",
+						"tags":["comida"]
+					}
+				],
+				"credits":[
+					{
+						"description":"Ingresso Tomorrowland",
+						"amount":"300",
+						"tags":[]
+					}
+				],
+				"summary":{
+					"totalDebit":"125.50",
+					"totalCredit":"300",
+					"totalInvested":"651",
+					"currentSalary":"1500",
+					"percentageSalaryInvested":"42.62",
+					"surplus":"7.43",
+					"spedingPerCategories":[
+						{
+							"name":"compras",
+							"amount":"100"
+						},
+						{
+							"name":"comida",
+							"amount":"25.50"
+						}
+					]
+				}
+			}
+		}
+	}
+}
