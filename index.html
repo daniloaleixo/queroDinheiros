@@ -5,13 +5,15 @@
 	<title>Quero Dinheiros</title>	
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+  	<link type="text/css" rel="stylesheet" href="lib/materialize/css/materialize.min.css"  media="screen,projection"/>
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	<!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 	<!--Import jQuery before materialize.js-->
   	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  	<link type="text/css" rel="stylesheet" href="lib/materialize/css/materialize.min.css"  media="screen,projection"/>
+  	<script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
 
   	<!-- Firebase -->
   	<script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
@@ -28,7 +30,16 @@
 		<!-- Header com Logo -->
 	    <div class="nav-wrapper">
 	      <a href="#" class="brand-logo">QueroDinheiros</a>
+	      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 	    </div>
+	    <!-- menu -->
+	    <ul id="slide-out" class="side-nav">
+	        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+	        <li><a href="#!">Second Link</a></li>
+	        <li><div class="divider"></div></li>
+	        <li><a class="subheader">Subheader</a></li>
+	        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+	      </ul>
 	    <!-- Abas  -->
 	    <div class="nav-content">
 	      <ul class="tabs tabs-transparent">
@@ -41,7 +52,5 @@
 	  <div id="test1" class="col s12">Test 1</div>
 	  <div id="test2" class="col s12">Test 2</div>
 	  <div id="test3" class="col s12">Test 3</div>
-
-
 </body>
 </html>

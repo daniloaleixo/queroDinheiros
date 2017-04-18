@@ -4,7 +4,7 @@
 
 	var user = CookieHandler.checkCookie();
 
-	if(!user) window.location.replace("https://gutomotta.github.io/querodinheiros/login");
+	// if(!user) window.location.replace("https://gutomotta.github.io/querodinheiros/login");
 
 
 
@@ -12,6 +12,11 @@
 	$(document).ready(function() {
 	    
 	    console.log( "index ready!" );
+
+	    // Initialize collapse button
+	      $(".button-collapse").sideNav();
+	      // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+	      //$('.collapsible').collapsible();
 
 	});
 	
