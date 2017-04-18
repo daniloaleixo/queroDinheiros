@@ -18,6 +18,19 @@
 	      // Initialize collapsible (uncomment the line below if you use the dropdown variation)
 	      //$('.collapsible').collapsible();
 
+
+	      $('#spedingRecord').click(function(){
+	      	var spedingObj = {
+  		      	spendingDescription: $("#spendingDescription").val(),
+  				spendingValue: $("#spendingValue").val(),
+  				spendingTags: $("#spendingTags").val(),
+  				spendingMonth: "Março".substring(0,3),
+  				spendingYear: "2017"
+	      	};
+
+			console.log(spedingObj);
+	      })
+
 	});
 	
 
