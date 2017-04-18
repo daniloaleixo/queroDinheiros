@@ -4,10 +4,6 @@
 	<meta charset="utf-8">
 	<title>Login - Quero Dinheiros</title>
 
-	<!-- Tem que ver se vamos importar a fonte da pasta fonts -->
-	<!-- Import materialize.css -->
-	<link type="text/css" rel="stylesheet" href="lib/materialize/css/materialize.min.css"  media="screen,projection"/>
-
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -16,27 +12,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<!--Import jQuery before materialize.js-->	
   	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  	<script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+  	<link type="text/css" rel="stylesheet" href="lib/materialize/css/materialize.min.css"  media="screen,projection"/>
+  	
+  	<!-- Firebase -->
+  	<script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+  	<!-- Initialize Firebase -->
+  	<script type="text/javascript" src="js/serverInit.js"></script>
 
 
   	<script type="text/javascript" src="js/cookieHandler.js"></script>
   	<script type="text/javascript" src="js/login.js"></script>
-
-
-  	<!-- Firebase -->
-  	<script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
-  	<script>
-  	  // Initialize Firebase
-  	  var config = {
-  	    apiKey: "AIzaSyCi-a5Wx0E3RHxpyBparukydEpVYQ7BR-Q",
-  	    authDomain: "quero-dinheiros.firebaseapp.com",
-  	    databaseURL: "https://quero-dinheiros.firebaseio.com",
-  	    projectId: "quero-dinheiros",
-  	    storageBucket: "quero-dinheiros.appspot.com",
-  	    messagingSenderId: "727342562932"
-  	  };
-  	  firebase.initializeApp(config);
-  	</script>
 </head>
 <body>
 	<div id="content">
