@@ -4,7 +4,9 @@
 
 	var user = CookieHandler.checkCookie();
 
-	// if(!user) window.location.replace("https://gutomotta.github.io/querodinheiros/login");
+	if(!user) window.location.replace("https://gutomotta.github.io/querodinheiros/login");
+
+
 
 
 
@@ -21,14 +23,28 @@
 
 	      $('#spedingRecord').click(function(){
 	      	var spedingObj = {
-  		      	spendingDescription: $("#spendingDescription").val(),
-  				spendingValue: $("#spendingValue").val(),
-  				spendingTags: $("#spendingTags").val(),
-  				spendingMonth: "Março".substring(0,3),
-  				spendingYear: "2017"
+  		      	description: $("#spendingDescription").val(),
+  				amount: $("#spendingValue").val(),
+  				tags: $("#spendingTags").val().split(" ")
 	      	};
+	      	var spendingMonth = "Março".substring(0,3);
+  			var spendingYear = "2015";
 
+	      	console.log("Vou colocar no servidor ano:" + spendingYear + " mes:" + spendingMonth + " o objeto:")
 			console.log(spedingObj);
+
+			var newSpedingRef = firebase.database().ref()
+													.child(uid)
+													// .child("CpLSvM5t9lTDbMyydika4Cdq4Ek1")
+													.child(spendingYear)
+													.child(spendingMonth)
+													.child("debts")
+													.push();
+          	newSpedingRef.set(spedingObj).then(function(){
+          		console.log("Informação colocada no servidor com sucesso");
+          	}, function(error){
+          		console.log(error);
+          	});
 	      })
 
 	});
