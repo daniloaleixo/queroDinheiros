@@ -34,7 +34,7 @@
 			console.log(spedingObj);
 
 			var newSpedingRef = firebase.database().ref()
-													.child(uid)
+													.child(user.uid)
 													// .child("CpLSvM5t9lTDbMyydika4Cdq4Ek1")
 													.child(spendingYear)
 													.child(spendingMonth)
