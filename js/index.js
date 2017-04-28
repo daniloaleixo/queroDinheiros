@@ -23,8 +23,8 @@
 
 	      $('#spedingRecord').click(function(){
 	      	var spedingObj = {
-  		      	description: $("#spendingDescription").val(),
-  				amount: $("#spendingValue").val(),
+  		      	description: validateDescription($("#spendingDescription").val()),
+  				amount: validateAmount($("#spendingValue").val()),
   				tags: $("#spendingTags").val().split(" ")
 	      	};
 	      	var spendingMonth = "Março".substring(0,3);
@@ -48,9 +48,20 @@
 	      })
 
 	});
+
+	var validateAmount = function(amount){
+		amount.replace(/,/g, '.');
+		return parseFloat(amount);
+	}
+
+	var validateDescription = function(description){
+		if(description.length == 0) return 'null';
+		return description;
+	}
 	
 
 })(jQuery);
+
 
 
 
