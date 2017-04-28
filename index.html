@@ -70,11 +70,18 @@
 	  <div id="test1" class="col s12">
 	  	<div class="row">
 	  	    <form class="col s12">
-	  	      	<div class="row">
-	  	    		<div class="col s12">
-	  	      	  		<h5>Adicionar gasto</h5>
-	  	      		</div>	
-	  	      	</div>
+
+	  	    	<div style="margin-top:20px;"></div>
+
+	  	    	<!-- Tags -->
+	  	    	<div class="row">
+	  	    		<div class="input-field col s12">
+	  	    			<i class="material-icons prefix">label</i>
+	  	    			<div class="chips chips-autocomplete"></div>
+	  	    			<label for="first_name">Tags (pressione Enter para salvar as tags)</label>
+	  	    		</div>
+	  	    	</div>
+
 
 	  	      	<!-- Amount -->
 	  	      	<div class="row">
@@ -84,20 +91,9 @@
 	  	          		<label for="first_name">Valor</label>
 	  	        	</div>
 
-	  
-	  	      	<!-- Tags -->
-		  	        <div class="input-field col s12 m6">
-			  	        <i class="material-icons prefix">label</i>
-	  	          		<input placeholder="#compras #shopping" id="spendingTags" type="text" class="validate">
-	  	          		<label for="first_name">Adicionar Tags</label>
-	  	        	</div>
-
-
-	  	      	</div>
 
 	  	      	<!-- Description  -->
-	  	      	<div class="row">
-	  	        	<div class="input-field col s12">
+	  	        	<div class="input-field col s12 m6">
 	  	          		<i class="material-icons prefix">description</i>
 	  	          		<input placeholder="Compras no Shopping" id="spendingDescription" type="text" class="validate">
 	  	          		<label for="first_name">Descrição (Opcional) </label>

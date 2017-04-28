@@ -35,10 +35,12 @@
 
 
 	      $('#spedingRecord').click(function(){
+
+
 	      	var spedingObj = {
   		      	description: validateDescription($("#spendingDescription").val()),
   				amount: validateAmount($("#spendingValue").val()),
-  				tags: $("#spendingTags").val().split(" "),
+  				tags: $('.chips-autocomplete').material_chip('data'),
   				date: $("#spendingDate").val()
 	      	};
 	      	var spendingMonth = "Março".substring(0,3);
@@ -65,7 +67,24 @@
           	});
 	      })
 
+	      // date picker
 	      $('#spendingDate').bootstrapMaterialDatePicker({ weekStart : 0, time: false });
+
+
+	      // Tags
+	      $('.chips-autocomplete').material_chip({
+	          autocompleteOptions: {
+	            data: {
+	              'Compras': null,
+	              'Comida': null,
+	              'Transporte': null,
+	              'Supermercado': null,
+	              'Roupas': null
+	            },
+	            limit: Infinity,
+	            minLength: 1
+	          }
+	        });
 
 
 
@@ -89,7 +108,6 @@
 	var clearSpedingsInputs = function(){
       	$("#spendingDescription").val("");
 		$("#spendingValue").val("");
-		$("#spendingTags").val("");
 		$("#spendingDate").val(todayDate);
 	}
 	
