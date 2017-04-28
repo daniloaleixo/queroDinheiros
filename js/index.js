@@ -43,6 +43,7 @@
 	      	console.log("Vou colocar no servidor ano:" + spendingYear + " mes:" + spendingMonth + " o objeto:")
 			console.log(spedingObj);
 
+
 			var newSpedingRef = firebase.database().ref()
 													.child(user.uid)
 													// .child("CpLSvM5t9lTDbMyydika4Cdq4Ek1")
@@ -51,8 +52,9 @@
 													.child("debts")
 													.push();
           	newSpedingRef.set(spedingObj).then(function(){
-          		console.log("Informação colocada no servidor com sucesso");
+				Materialize.toast('Novo gasto incluído com sucesso', 4000);
           	}, function(error){
+          		Materialize.toast('Desculpe mas não consegui incluir seu gasto :(, tente novamente', 4000);
           		console.log(error);
           	});
 	      })
