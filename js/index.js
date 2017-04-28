@@ -5,7 +5,7 @@
 	var user = CookieHandler.checkCookie();
 	var url = window.location.href;
 
-	// if(!user) window.location.replace(url + "/login");
+	if(!user) window.location.replace(url + "/login");
 
 	
 
