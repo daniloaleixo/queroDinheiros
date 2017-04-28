@@ -5,18 +5,22 @@
 	var user = CookieHandler.checkCookie();
 	var url = window.location.href;
 
-	if(!user) window.location.replace(url + "/login");
+	// if(!user) window.location.replace(url + "/login");
 
+	
 
+	var today = new Date();
+	var dd = today.getDate().toString();
+	var mm = today.getMonth() + 1;
+	if (mm < 10) mm = "0" + mm.toString();
+	var yyyy = today.getFullYear().toString();
+	var todayDate = yyyy + "-" + mm + "-" + dd;
 
 	window.onload = function(){  
-		var today = new Date();
-		var date = today.getFullYear().toString() + "-" + 
-					(today.getMonth() +1).toString() + "-" + 
-					today.getDate().toString();
-		$("#spendingDate").val(date);
+		$("#spendingDate").val(todayDate);
 
 	}
+
 
 
 	// When document is ready, check for the user
@@ -53,9 +57,11 @@
 													.push();
           	newSpedingRef.set(spedingObj).then(function(){
 				Materialize.toast('Novo gasto incluído com sucesso', 4000);
+				clearSpedingsInputs();
           	}, function(error){
           		Materialize.toast('Desculpe mas não consegui incluir seu gasto :(, tente novamente', 4000);
           		console.log(error);
+          		clearSpedingsInputs();
           	});
 	      })
 
@@ -78,6 +84,13 @@
 	var validateDescription = function(description){
 		if(description.length == 0) return 'null';
 		return description;
+	}
+
+	var clearSpedingsInputs = function(){
+      	$("#spendingDescription").val("");
+		$("#spendingValue").val("");
+		$("#spendingTags").val("");
+		$("#spendingDate").val(todayDate);
 	}
 	
 
