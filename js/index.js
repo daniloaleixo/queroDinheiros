@@ -3,11 +3,20 @@
 (function($){
 
 	var user = CookieHandler.checkCookie();
+	var url = window.location.href;
 
-	if(!user) window.location.replace("https://gutomotta.github.io/querodinheiros/login");
+	if(!user) window.location.replace(url + "/login");
 
 
 
+	window.onload = function(){  
+		var today = new Date();
+		var date = today.getFullYear().toString() + "-" + 
+					(today.getMonth() +1).toString() + "-" + 
+					today.getDate().toString();
+		$("#spendingDate").val(date);
+
+	}
 
 
 	// When document is ready, check for the user
@@ -25,7 +34,8 @@
 	      	var spedingObj = {
   		      	description: validateDescription($("#spendingDescription").val()),
   				amount: validateAmount($("#spendingValue").val()),
-  				tags: $("#spendingTags").val().split(" ")
+  				tags: $("#spendingTags").val().split(" "),
+  				date: $("#spendingDate").val()
 	      	};
 	      	var spendingMonth = "Março".substring(0,3);
   			var spendingYear = "2015";
@@ -47,8 +57,17 @@
           	});
 	      })
 
+	      $('#spendingDate').bootstrapMaterialDatePicker({ weekStart : 0, time: false });
+
+
+
 	});
 
+
+
+	// *********************
+	// Auxiliary functions
+	// *********************
 	var validateAmount = function(amount){
 		amount.replace(/,/g, '.');
 		return parseFloat(amount);
