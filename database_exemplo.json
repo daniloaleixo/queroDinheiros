@@ -1,26 +1,21 @@
 {
 	"CpLSvM5t9lTDbMyydika4Cdq4Ek1":{
-		"2015":{
-			"Mar":{
-				"debts":[
-					{
-						"description":"Kindle",
-						"amount":"100",
-						"tags":["compras"]
-					},
-					{
-						"description":"Bacio di Latte",
-						"amount":"25.50",
-						"tags":["comida"]
-					}
-				],
-				"credits":[
-					{
-						"description":"Ingresso Tomorrowland",
-						"amount":"300",
-						"tags":[]
-					}
-				],
+		"2017":{
+			"05":{
+				"02":{
+					"debts":[
+						{
+							"description":"Kindle",
+							"amount":"100",
+							"tags":["compras"]
+						},
+						{
+							"description":"Bacio di Latte",
+							"amount":"25.50",
+							"tags":["Comida"]
+						}
+					]	
+				},
 				"summary":{
 					"totalDebit":"125.50",
 					"totalCredit":"300",
@@ -30,11 +25,11 @@
 					"surplus":"7.43",
 					"spedingPerCategories":[
 						{
-							"name":"compras",
+							"name":"Compras",
 							"amount":"100"
 						},
 						{
-							"name":"comida",
+							"name":"Comida",
 							"amount":"25.50"
 						}
 					]
