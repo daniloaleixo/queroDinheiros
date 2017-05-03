@@ -5,7 +5,10 @@
 	var user = CookieHandler.checkCookie();
 	var url = window.location.href;
 
-	if(!user) window.location.replace(url + "/login");
+	if(!user) {
+		if(url[url.length - 1] !== '/') url += '/';
+		window.location.replace(url + 'login.html');
+	}
 
 	
 
