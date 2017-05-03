@@ -23,7 +23,7 @@
 					"currentSalary":"1500",
 					"percentageSalaryInvested":"42.62",
 					"surplus":"7.43",
-					"spedingPerCategories":[
+					"spendingPerCategories":[
 						{
 							"name":"Compras",
 							"amount":"100"
