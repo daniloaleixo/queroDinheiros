@@ -46,29 +46,37 @@
   				tags: $('.chips-autocomplete').material_chip('data'),
   				date: $("#spendingDate").val()
 	      	};
-	      	var spendingMonth = "Março".substring(0,3);
-  			var spendingYear = "2015";
 
-	      	console.log("Vou colocar no servidor ano:" + spendingYear + " mes:" + spendingMonth + " o objeto:")
+	      	// dateArray vai ter o ano na posição 0, mes posição 1 e dia pos 2
+	      	var dateArray = $("#spendingDate").val().split('-');
+
+	      	console.log("Vou colocar no servidor ano:" + dateArray[0] + " mes:" + dateArray[1] 
+	      							+ " dia: " + dateArray[2] + " o objeto:");
 			console.log(spedingObj);
 
 
-			var newSpedingRef = firebase.database().ref()
-													.child(user.uid)
-													// .child("CpLSvM5t9lTDbMyydika4Cdq4Ek1")
-													.child(spendingYear)
-													.child(spendingMonth)
-													.child("debts")
-													.push();
-          	newSpedingRef.set(spedingObj).then(function(){
-				Materialize.toast('Novo gasto incluído com sucesso', 4000);
-				clearSpedingsInputs();
-          	}, function(error){
-          		Materialize.toast('Desculpe mas não consegui incluir seu gasto :(, tente novamente', 4000);
-          		console.log(error);
-          		clearSpedingsInputs();
-          	});
-	      })
+			if(!isNaN(spedingObj.amount)){
+				var newSpedingRef = firebase.database().ref()
+														.child(user.uid)
+														.child(dateArray[0])
+														.child(dateArray[1])
+														.child(dateArray[2])
+														.child("debts")
+														.push();
+	          	newSpedingRef.set(spedingObj).then(function(){
+					Materialize.toast('Novo gasto incluído com sucesso', 4000);
+					clearSpedingsInputs();
+	          	}, function(error){
+	          		Materialize.toast('Desculpe mas não consegui incluir seu gasto :(, tente novamente', 4000);
+	          		console.log(error);
+	          		clearSpedingsInputs();
+	          	});
+				
+			} else Materialize.toast('Por favor preencha o valor que foi gasto', 2000);
+
+	      }) // End click function
+
+
 
 	      // date picker
 	      $('#spendingDate').bootstrapMaterialDatePicker({ weekStart : 0, time: false });
