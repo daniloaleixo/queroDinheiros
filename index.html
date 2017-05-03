@@ -25,9 +25,24 @@
   	<script type="text/javascript" src="lib/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
   	<link rel="stylesheet" type="text/css" href="lib/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css">
 
+  	<!-- Chart.js -->
+  	<script type="text/javascript" src="node_modules/chart.js/dist/Chart.bundle.js"></script>
+  	<script src="node_modules/chart.js/samples/utils.js"></script>
+
   	<script type="text/javascript" src="js/cookieHandler.js"></script>
 
   	<script type="text/javascript" src="js/index.js"></script>
+
+  	<script type="text/javascript" src="js/spendingPieChart.js"></script>
+
+  	<style>
+    canvas {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    </style>
+
 	
 	<!-- Analytics -->
 	<script>
@@ -60,7 +75,7 @@
 	    <div class="nav-content">
 	      <ul class="tabs tabs-transparent">
 	        <li class="tab"><a href="#test1">Adcionar</a></li>
-	        <li class="tab"><a class="active" href="#test2">Test 2</a></li>
+	        <li class="tab"><a class="active" href="#test2">Gastos</a></li>
 	        <li class="tab"><a href="#test3">Test 3</a></li>
 	      </ul>
 	    </div>
@@ -119,7 +134,14 @@
 	  	  </div>
 	  </div>
 
-	  <div id="test2" class="col s12">Test 2</div>
+	  <div id="test2" class="col s12">
+	  	Test 2
+
+	  	<div id="canvas-holder" style="width:40%; margin: 0 auto;">
+	  	    <canvas id="chart-area" />
+	  	</div>
+
+	  </div>
 	  <div id="test3" class="col s12">Test 3</div>
 </body>
 </html>

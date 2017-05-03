@@ -31,6 +31,14 @@
 						{
 							"name":"Comida",
 							"amount":"25.50"
+						},
+						{
+							"name":"Supermercado",
+							"amount":"76.40"
+						},
+						{
+							"name":"Transporte",
+							"amount":"106.47"
 						}
 					]
 				}
