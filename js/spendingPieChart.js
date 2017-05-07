@@ -33,9 +33,11 @@ var config = {
     }
 };
 
-window.onload = function() {
+var startPieChart = function() {
+    console.log("function startPieChart");
     var database = firebase.database();
     var user = CookieHandler.checkCookie();
+
 
     // Date
     var today = new Date();
@@ -72,6 +74,8 @@ window.onload = function() {
         // Put in the config for the chart
         config["data"]["labels"] = spendingsName;
         config["data"]["datasets"][0]["data"] = spendingsAmount;
+
+        // <div id="canvas-holder" style="width:40%; margin: 0 auto;">
 
         window.myPie = new Chart(ctx, config);
 

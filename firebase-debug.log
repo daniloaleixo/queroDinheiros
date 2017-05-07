@@ -3,24 +3,24 @@
 [debug] CLI Version:  3.6.1
 [debug] Platform:     linux
 [debug] Node Version: v7.8.0
-[debug] Time:         Tue May 02 2017 22:38:19 GMT-0300 (BRT)
+[debug] Time:         Sun May 07 2017 19:53:27 GMT-0300 (BRT)
 [debug] ----------------------------------------------------------------------
 [debug] 
 [debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
 [debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/quero-dinheiros  
- Tue May 02 2017 22:38:19 GMT-0300 (BRT)
+ Sun May 07 2017 19:53:27 GMT-0300 (BRT)
 [debug] <<< HTTP RESPONSE 200
 [debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/quero-dinheiros/tokens  
- Tue May 02 2017 22:38:21 GMT-0300 (BRT)
+ Sun May 07 2017 19:53:28 GMT-0300 (BRT)
 [debug] <<< HTTP RESPONSE 200
 [info] Starting Firebase development server...
 [info] 
 [info] Project Directory: /home/danilo/Dropbox/Computer_Science/Web/querodinheiros
 [debug] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/quero-dinheiros  
- Tue May 02 2017 22:38:22 GMT-0300 (BRT)
+ Sun May 07 2017 19:53:29 GMT-0300 (BRT)
 [debug] <<< HTTP RESPONSE 200
 [debug] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/727342562932/clients/_:getWebAppConfig  
- Tue May 02 2017 22:38:23 GMT-0300 (BRT)
+ Sun May 07 2017 19:53:30 GMT-0300 (BRT)
 [debug] <<< HTTP RESPONSE 200
 [info] Public Directory: ./
 [info] 

@@ -12,16 +12,11 @@
 
 	
 
-	var today = new Date();
-	var dd = today.getDate().toString();
-	var mm = today.getMonth() + 1;
-	if (mm < 10) mm = "0" + mm.toString();
-	var yyyy = today.getFullYear().toString();
-	var todayDate = yyyy + "-" + mm + "-" + dd;
+	
 
 	window.onload = function(){  
-		$("#spendingDate").val(todayDate);
-
+		getCurrentDate();
+		startPieChart();
 	}
 
 
@@ -119,6 +114,16 @@
 	var clearSpedingsInputs = function(){
       	$("#spendingDescription").val("");
 		$("#spendingValue").val("");
+		$("#spendingDate").val(todayDate);
+	}
+
+	var getCurrentDate = function() {
+		var today = new Date();
+		var dd = today.getDate().toString();
+		var mm = today.getMonth() + 1;
+		if (mm < 10) mm = "0" + mm.toString();
+		var yyyy = today.getFullYear().toString();
+		var todayDate = yyyy + "-" + mm + "-" + dd;
 		$("#spendingDate").val(todayDate);
 	}
 	
