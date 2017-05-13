@@ -5,20 +5,37 @@ import os
 from bs4 import BeautifulSoup
 import codecs
 
+# internationalize the month
+def transform_month(month):
+	if month.lower() == 'jan' or month.lower() == 'jan': return 'Jan'
+	if month.lower() == 'fev' or month.lower() == 'feb': return 'Feb'
+	if month.lower() == 'mar' or month.lower() == 'mar': return 'Mar'
+	if month.lower() == 'abr' or month.lower() == 'apr': return 'Apr'
+	if month.lower() == 'mai' or month.lower() == 'may': return 'May'
+	if month.lower() == 'jun' or month.lower() == 'jun': return 'Jun'
+	if month.lower() == 'jul' or month.lower() == 'jul': return 'Jul'
+	if month.lower() == 'ago' or month.lower() == 'aug': return 'Aug'
+	if month.lower() == 'set' or month.lower() == 'sep': return 'Sep'
+	if month.lower() == 'out' or month.lower() == 'oct': return 'Oct'
+	if month.lower() == 'nov' or month.lower() == 'nov': return 'Nov'
+	if month.lower() == 'dez' or month.lower() == 'dec': return 'Dec'
+	return None
+
+
+
+# Open the files 
 f = codecs.open('Gastos.html', 'r', encoding='utf-8')
 content = f.read()
 f.close()
 
 saida = codecs.open('gastos.json', 'w', encoding='utf-8')
 
-# print content
 
 # parse HTML
 soup = BeautifulSoup(content, 'html.parser')
 # print(soup.prettify())
 
 tbody = soup.table.tbody
-
 linhas = tbody.find_all('tr')
 
 # Linha com os meses
@@ -37,12 +54,13 @@ for i in range(1, len(mesesLinha)- 1):
 
 arrayGastos = [[]] * len(meses)
 
-
+# put every html of gastos inside todosGastosHtml
 todosGastosHtml = [[]] * 27
 for i in range(2, 25):
 	todosGastosHtml[i - 2] = linhas[i].find_all('td')
 
 
+# populate the arrayGastos with the gastos from the months
 indiceMes = 0
 for j in range(0, len(meses)):
 	
@@ -67,11 +85,26 @@ for j in range(0, len(meses)):
 	indiceMes = indiceMes + 1
 
 
-# print 'rsultado final'
-# print gastoMes
-print meses[0], arrayGastos[0]
-print meses[len(meses)- 3], arrayGastos[len(meses) - 3]
-print meses[len(meses)- 1], arrayGastos[len(meses) - 1]
+
+
+# Turn info into JSON
+json = dict()
+
+# iterate  over the array of months
+for elem in meses:
+	year = ('20' + elem[len(elem) - 2:]).encode('utf8')
+	month = transform_month(elem[:3]).encode('utf8')
+	if not json.has_key(year):
+		json[year] = {}
+	json[year][month] = {}
+
+print json
+
+
+
+
+
+
 
 
 
