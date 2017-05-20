@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login - Quero Dinheiros</title>
+
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+
+  	<link type="text/css" rel="stylesheet" href="lib/materialize/css/materialize.min.css"  media="screen,projection"/>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!--Import jQuery before materialize.js-->	
+  	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  	<script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+
+  	
+  	<!-- Firebase -->
+  	<script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+  	<!-- Initialize Firebase -->
+  	<script type="text/javascript" src="js/serverInit.js"></script>
+
+
+  	<script type="text/javascript" src="js/cookieHandler.js"></script>
+  	<script type="text/javascript" src="js/login.js"></script>
+</head>
+<body>
+	<div id="content">
+		<div class="row">
+			<div class="col s12" style="text-align:center;">
+				<h2>
+					Quero <br>
+					Dinheiros
+				</h2>
+			</div>
+		</div>
+		<div class="row">
+
+
+		<!-- There are two forms, one will be the register and the other the login form
+			The idea is that when the user clicks "I don't have an account" the form switches
+			to register form -->
+		    <form class="col s12">
+			    <div class="input-content">
+			    	<!-- <div class="row register-form">
+			    	    <div class="input-field col s12">
+			    	      	<input id="nameInput" type="text" class="validate">
+			    	      	<label for="icon_telephone">Nome</label>
+			    	    </div>
+			    	</div> -->
+				    <div class="row" style="margin-bottom: 0px;">
+				        <div class="input-field col s12">
+				          	<!-- <i class="material-icons prefix">account_circle</i> -->
+				          	<input id="emailInput" type="email" class="validate">
+				          	<label for="icon_prefix">Email</label>
+				        </div>
+				    </div>
+				    <div class="row" style="margin-bottom: 0px;">
+				        <div class="input-field col s12">
+				          	<!-- <i class="material-icons prefix">phone</i> -->
+				          	<input id="passwordInput" type="password" class="validate">
+				          	<label for="icon_telephone">Password</label>
+				        </div>
+				    </div>
+				    <div class="row register-form">
+				        <div class="input-field col s12">
+				          	<!-- <i class="material-icons prefix">phone</i> -->
+				          	<input id="password2Input" type="password" class="validate">
+				          	<label for="icon_telephone">Repeat your Password</label>
+				        </div>
+				    </div>
+			    </div>
+			    <!-- Divider -->
+			    <div style="margin-top:50px;"></div>
+
+			    <div class="row login-form">
+			    	<div class="col s12">
+			    		<a id="login" class="waves-effect waves-light btn btn-block"
+			    			style="width: 100%">Login</a>
+			    	</div>
+			    </div>
+			    <div class="row register-form">
+			    	<div class="col s12">
+			    		<a id="register" class="waves-effect waves-light btn btn-block"
+			    			style="width: 100%">Registrar</a>
+			    	</div>
+			    </div>
+			    <div class="row">
+			    	<div class="col s12">
+			    		<a id="loginGoogle" class="waves-effect waves-light btn btn-block"
+			    			style="width: 100%">Entrar com o Google</i></a>
+			    	</div>
+			    </div>
+			    <div class="row">
+			    	<div class="col s12" style="cursor:pointer">
+			    		<a id="switchToRegisterForm" class="login-form">Ainda não possui uma conta?</a>
+		    			<a id="switchToLoginForm" class="register-form">Já possui uma conta?</a>
+			    	</div>
+			    </div>
+		    		
+		    </form>
+
+		</div>
+	</div>
+
+
+
+
+</body>
+</html>

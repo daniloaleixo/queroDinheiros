@@ -1,7 +1,9 @@
 {
   "name": "quero-dinheiros",
   "version": "0.0.0",
+  "description": "Aplicação de gerenciamento de finanças pessoais.",
   "license": "MIT",
+  "author": "",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -22,7 +24,9 @@
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
-    "zone.js": "^0.8.4"
+    "zone.js": "^0.8.4",
+    "chart.js": "^2.5.0",
+    "firebase": "^3.9.0"
   },
   "devDependencies": {
     "@angular/cli": "1.0.0",
@@ -42,5 +46,17 @@
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.2.0"
-  }
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniloaleixo/queroDinheiros.git"
+  },
+  "bugs": {
+    "url": "https://github.com/daniloaleixo/queroDinheiros/issues"
+  },
+  "homepage": "https://github.com/daniloaleixo/queroDinheiros#readme"
 }
