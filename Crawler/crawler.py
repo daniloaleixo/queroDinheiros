@@ -4,21 +4,22 @@
 import os
 from bs4 import BeautifulSoup
 import codecs
+import json
 
 # internationalize the month
 def transform_month(month):
-	if month.lower() == 'jan' or month.lower() == 'jan': return 'Jan'
-	if month.lower() == 'fev' or month.lower() == 'feb': return 'Feb'
-	if month.lower() == 'mar' or month.lower() == 'mar': return 'Mar'
-	if month.lower() == 'abr' or month.lower() == 'apr': return 'Apr'
-	if month.lower() == 'mai' or month.lower() == 'may': return 'May'
-	if month.lower() == 'jun' or month.lower() == 'jun': return 'Jun'
-	if month.lower() == 'jul' or month.lower() == 'jul': return 'Jul'
-	if month.lower() == 'ago' or month.lower() == 'aug': return 'Aug'
-	if month.lower() == 'set' or month.lower() == 'sep': return 'Sep'
-	if month.lower() == 'out' or month.lower() == 'oct': return 'Oct'
-	if month.lower() == 'nov' or month.lower() == 'nov': return 'Nov'
-	if month.lower() == 'dez' or month.lower() == 'dec': return 'Dec'
+	if month.lower() == 'jan' or month.lower() == 'jan': return '01'
+	if month.lower() == 'fev' or month.lower() == 'feb': return '02'
+	if month.lower() == 'mar' or month.lower() == 'mar': return '03'
+	if month.lower() == 'abr' or month.lower() == 'apr': return '04'
+	if month.lower() == 'mai' or month.lower() == 'may': return '05'
+	if month.lower() == 'jun' or month.lower() == 'jun': return '06'
+	if month.lower() == 'jul' or month.lower() == 'jul': return '07'
+	if month.lower() == 'ago' or month.lower() == 'aug': return '08'
+	if month.lower() == 'set' or month.lower() == 'sep': return '09'
+	if month.lower() == 'out' or month.lower() == 'oct': return '10'
+	if month.lower() == 'nov' or month.lower() == 'nov': return '11'
+	if month.lower() == 'dez' or month.lower() == 'dec': return '12'
 	return None
 
 
@@ -88,19 +89,32 @@ for j in range(0, len(meses)):
 
 
 # Turn info into JSON
-json = dict()
+jsonObj = dict()
 
 # iterate  over the array of months
 for elem in meses:
 	year = ('20' + elem[len(elem) - 2:]).encode('utf8')
 	month = transform_month(elem[:3]).encode('utf8')
-	if not json.has_key(year):
-		json[year] = {}
-	json[year][month] = {}
+	if not jsonObj.has_key(year):
+		jsonObj[year] = {}
+	jsonObj[year][month] = {}
 
-print json
+# print jsonObj
 
 
+# put the speding in the json
+count = 0
+for year in sorted(jsonObj):
+	print year
+	for month in sorted(jsonObj[year]):
+		print month
+		jsonObj[year][month]['debts'] = arrayGastos[count]
+		count = count + 1
+
+
+
+saida.write(json.dumps(jsonObj, ensure_ascii=False, indent=4, sort_keys=True));
+saida.close()
 
 
 
