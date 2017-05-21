@@ -1,3 +1,57 @@
-<p>
-  add-spending works!
-</p>
+<!-- Gastos -->
+	  <div id="test1" class="col s12">
+	  	<div class="row">
+	  	    <form class="col s12">
+	  	    	<div style="margin-top:20px;"></div>
+	  	    	<div class="row">
+	  	    		<div class="col s12">
+	  					<h5>Adicione um gasto</h5>
+	  	    		</div>
+	  	    	</div>
+
+
+	  	    	<!-- Tags -->
+	  	    	<div class="row">
+	  	    		<div class="input-field col s12">
+	  	    			<i class="material-icons prefix">label</i>
+	  	    			<div class="chips chips-autocomplete"></div>
+	  	    			<label class="active" for="first_name">Tags (pressione Enter para salvar as tags)</label>
+	  	    		</div>
+	  	    	</div>
+
+
+	  	      	<!-- Amount -->
+	  	      	<div class="row">
+	  	        	<div class="input-field col s12 m6">
+	  	          		<i class="material-icons prefix">attach_money</i>
+	  	          		<input placeholder="1001.60" id="spendingValue" type="number" class="validate">
+	  	          		<label class="active" for="first_name">Valor</label>
+	  	        	</div>
+
+
+	  	      	<!-- Description  -->
+	  	        	<div class="input-field col s12 m6">
+	  	          		<i class="material-icons prefix">description</i>
+	  	          		<input placeholder="Compras no Shopping" id="spendingDescription" type="text" class="validate">
+	  	          		<label class="active" for="first_name">Descrição (Opcional) </label>
+	  	        	</div>
+	  	        </div>
+
+	  	        <!-- Date  -->
+	  	      	<div class="row">
+	  	        	<div class="input-field col s12">
+	  	          		<i class="material-icons prefix">today</i>
+	  	          		<input value="x" id="spendingDate" type="text" class="validate">
+	  	          		<label class="active" for="first_name">Registrar gasto em </label>
+	  	        	</div>
+	  	        </div>
+
+	  	      	<!-- Button -->
+	  	      	<div class="row">
+	  	      		<div class="col s12">
+	  	      			<a id="spedingRecord" class="waves-effect waves-light btn" (click)="addSpending()">Adicionar Gasto</a>
+	  	      		</div>
+	  	      	</div>
+	  	    </form>
+	  	  </div>
+	  </div>

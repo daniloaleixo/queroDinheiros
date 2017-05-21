@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddSpendingComponent implements OnInit {
 
-  constructor() { }
+	private formData: IFormData;
 
-  ngOnInit() {
-  }
+  	constructor() {
+  		
+  	}
 
+  	ngOnInit() {
+  	}
+
+    addSpending() {
+      console.log('addSpending');
+    }
+
+}
+
+
+interface IFormData {
+	tags: string[],
+	amount: number,
+	description: string,
+	date: string
 }
