@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
 	private routes: Object;
 	private currentRoute: string = '';
 
-  	constructor(private router: Router, private authService: AuthService) {
+  	constructor(private router: Router, public authService: AuthService) {
 
   		this.router.events.subscribe((event) => {
         console.log(event);

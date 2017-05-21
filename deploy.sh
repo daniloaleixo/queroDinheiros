@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ng build && firebase deploy
+ng build -prod && firebase deploy
