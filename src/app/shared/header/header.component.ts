@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { appRoutes } from '../../app.routes';
-import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import {Router, NavigationEnd } from '@angular/router';
+import { AuthService } from '../../auth/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -13,21 +13,34 @@ export class HeaderComponent implements OnInit {
 	private routes: Object;
 	private currentRoute: string = '';
 
-  	constructor(private route: ActivatedRoute, private router: Router) {
+  	constructor(private router: Router, private authService: AuthService) {
 
-  		console.log(this.route);
   		this.router.events.subscribe((event) => {
+        console.log(event);
   			if(event instanceof NavigationEnd){
   				this.currentRoute = event.url;
-		  		this.routes = appRoutes;
-		  		this.routes[0]['name'] = 'Adicionar';
-		  		this.routes[1]['name'] = 'Gastos';
-		  		this.routes[2]['name'] = 'Investimentos';
+		  		this.routes = [
+            {
+              'path': 'spendings/add',
+              'name': 'Adicionar'
+            },
+            {
+              'path': 'spendings/view',
+              'name': 'Gastos'
+            },
+            {
+              'path': 'investments/view',
+              'name': 'Investimentos'
+            }
+          ];
   			}
-  		});
+  		}); 
+
   	}
 
   	ngOnInit() {
   	}
 
 }
+
+  

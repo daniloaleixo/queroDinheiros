@@ -2,14 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { SpendingsModule } from './spendings/spendings.module';
 import { InvestmentsModule } from './investments/investments.module';
-import { RouterModule } from '@angular/router';
+import { AuthModule } from './auth/auth.module';
 
 import { appRoutes } from './app.routes';
+
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -22,9 +25,10 @@ import { appRoutes } from './app.routes';
     HttpModule,
     SharedModule,
     SpendingsModule,
-    InvestmentsModule
+    InvestmentsModule,
+    AuthModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,18 @@
+.background-img {
+	background-image: url("../../../assets/tela_login.jpg");
+	background-size: cover;
+}
+
+.mask {
+	height: 100%;
+    width: 100%;
+    background-color: blue;
+    opacity: 0.1;
+    position: absolute;
+}
+
+.title {
+	color: #fee;
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+}
