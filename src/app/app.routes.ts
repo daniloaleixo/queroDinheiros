@@ -20,5 +20,10 @@ export const appRoutes: Routes = [
 	{
 		path: 'login',
 		component: LoginPageComponent
+	},
+	{ 
+		path: '',
+		redirectTo: 'spendings/add',
+		pathMatch: 'full'
 	}
 ];
