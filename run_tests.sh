@@ -1,5 +1,4 @@
 #!/bin/bash
 
-ng test
+ng test --watch=false
 ng lint
-ng e2e
