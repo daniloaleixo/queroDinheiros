@@ -10,7 +10,6 @@ import { AuthService } from '../../auth/auth.service';
 })
 export class HeaderComponent implements OnInit {
 
-	private routes: Object;
 	private currentRoute: string = '';
 
   	constructor(private router: Router, public authService: AuthService) {
@@ -19,20 +18,6 @@ export class HeaderComponent implements OnInit {
         console.log(event);
   			if(event instanceof NavigationEnd){
   				this.currentRoute = event.url;
-		  		this.routes = [
-            {
-              'path': 'spendings/add',
-              'name': 'Adicionar'
-            },
-            {
-              'path': 'spendings/view',
-              'name': 'Gastos'
-            },
-            {
-              'path': 'investments/view',
-              'name': 'Investimentos'
-            }
-          ];
   			}
   		}); 
 

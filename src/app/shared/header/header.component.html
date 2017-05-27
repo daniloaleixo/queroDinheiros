@@ -15,8 +15,14 @@
 	<!-- Abas  -->
 	<div class="nav-content">
 	  <ul class="tabs tabs-transparent">
-	    <li class="tab" *ngFor="let route of routes">
-	    	<a [routerLink]=[route.path] [ngClass]="{'active': ('/' + route.path == currentRoute) }">{{ route.name }}</a>
+	    <li class="tab">
+	    	<a routerLink="/spendings/add" [ngClass]="{'active': '/spendings/add' == currentRoute }">Adicionar</a>
+	    </li>
+	    <li class="tab">
+	    	<a routerLink="/spendings/view" [ngClass]="{'active': '/spendings/view' == currentRoute }">Gastos</a>
+	    </li>
+	    <li class="tab">
+	    	<a routerLink="/investments/view" [ngClass]="{'active': '/investments/view' == currentRoute }">Investimentos</a>
 	    </li>
 	  </ul>
 	</div>
