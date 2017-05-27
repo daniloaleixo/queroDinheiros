@@ -1,18 +1,18 @@
 .background-img {
-	background-image: url("../../../assets/tela_login.jpg");
+	background-image: url("../../../assets/tela_login2.jpg");
 	background-size: cover;
 }
 
-.mask {
-	height: 100%;
-    width: 100%;
-    background-color: blue;
-    opacity: 0.1;
-    position: absolute;
-}
-
 .title {
-	color: #fee;
+	color: #fff;
 	font-family: 'Lato', sans-serif;
 	font-size: 16px;
+}
+
+.input-field label {
+	color: white !important;
+}
+
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+	color: white !important;	
 }

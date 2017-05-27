@@ -9,6 +9,6 @@ describe('quero-dinheiros App', () => {
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getHeadingText()).toEqual('Quero Dinheiros');
   });
 });
