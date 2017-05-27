@@ -1,3 +1,5 @@
+
+	<app-loading [showLoading]="showLoading"></app-loading>
 <!-- Gastos -->
 	  <div id="test1" class="col s12">
 	  	<div class="row">
@@ -14,8 +16,9 @@
 	  	    	<div class="row">
 	  	    		<div class="input-field col s12">
 	  	    			<i class="material-icons prefix">label</i>
-	  	    			<div class="chips chips-autocomplete"></div>
 	  	    			<label class="active" for="first_name">Tags (pressione Enter para salvar as tags)</label>
+	  	    			<input name="tags" placeholder="#compras #shopping" type="text" 
+	  	    			[(ngModel)]="formData.tags">
 	  	    		</div>
 	  	    	</div>
 
@@ -24,7 +27,9 @@
 	  	      	<div class="row">
 	  	        	<div class="input-field col s12 m6">
 	  	          		<i class="material-icons prefix">attach_money</i>
-	  	          		<input placeholder="1001.60" id="spendingValue" type="number" class="validate">
+	  	          		<input name="amount" [(ngModel)]="formData.amount"
+	  	          		placeholder="1001.60" id="spendingValue" 
+	  	          		type="number" class="validate">
 	  	          		<label class="active" for="first_name">Valor</label>
 	  	        	</div>
 
@@ -32,17 +37,22 @@
 	  	      	<!-- Description  -->
 	  	        	<div class="input-field col s12 m6">
 	  	          		<i class="material-icons prefix">description</i>
-	  	          		<input placeholder="Compras no Shopping" id="spendingDescription" type="text" class="validate">
+	  	          		<input name="description" [(ngModel)]="formData.description" 
+	  	          		placeholder="Compras no Shopping" 
+	  	          		type="text" class="validate">
 	  	          		<label class="active" for="first_name">Descrição (Opcional) </label>
 	  	        	</div>
 	  	        </div>
 
 	  	        <!-- Date  -->
 	  	      	<div class="row">
+	  	      		<div class="input-field col s12">
+	  	          		<label class="active" for="first_name">Registrar gasto em </label>
+	  	          	</div>
 	  	        	<div class="input-field col s12">
 	  	          		<i class="material-icons prefix">today</i>
-	  	          		<input value="x" id="spendingDate" type="text" class="validate">
-	  	          		<label class="active" for="first_name">Registrar gasto em </label>
+	  	          		<my-date-picker name="mydate" [options]="myDatePickerOptions"
+                    		[(ngModel)]="formData.date" required></my-date-picker>
 	  	        	</div>
 	  	        </div>
 
