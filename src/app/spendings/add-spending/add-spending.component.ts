@@ -49,13 +49,13 @@ export class AddSpendingComponent implements OnInit {
     }
 
     addSpending() {
-      this.showLoading = true;
-      this.sendData.tags = this.formData.tags;
-      this.sendData.amount = this.validateAmount(this.formData.amount);
-      this.sendData.description = this.validateDescription(this.formData.description);
-      this.sendData.date = this.validateDate(this.formData.date);
+      if (this.sendData.tags || this.sendData.amount || this.sendData.date) {
+        this.showLoading = true;
+        this.sendData.tags = this.formData.tags;
+        this.sendData.amount = this.validateAmount(this.formData.amount);
+        this.sendData.description = this.validateDescription(this.formData.description);
+        this.sendData.date = this.validateDate(this.formData.date);
 
-      if (this.sendData.tags && this.sendData.amount && this.sendData.date) {
 
         console.log('enviar pro server', this.sendData);
         // Wait to system to login and then get the database
@@ -108,7 +108,7 @@ export class AddSpendingComponent implements OnInit {
 
     validateDate(date: IDatepicker): string {
      this.day = date.date.day.toString();
-     if (date.date.month < 10) this.month = '0' + date.date.month.toString();
+     if (date.date.month < 10) this.month = date.date.month.toString();
      else this.month = date.date.month.toString();
      this.year = date.date.year.toString();
 
@@ -119,6 +119,7 @@ export class AddSpendingComponent implements OnInit {
     clearSpedingsInputs(): void {
       Object.keys(this.formData).forEach((info) => this.formData[info] = '');
       Object.keys(this.sendData).forEach((info) => this.sendData[info] = '');
+      this.formData = this.utils.getCurrentDate();
     }
 
 }
