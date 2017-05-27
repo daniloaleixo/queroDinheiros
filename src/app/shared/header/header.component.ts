@@ -9,7 +9,7 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-	private currentRoute: string;
+	  currentRoute: string;
 
   	constructor(private router: Router) {
       this.currentRoute = '';

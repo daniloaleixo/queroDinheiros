@@ -24,8 +24,8 @@ before_script:
   - npm install -g @angular/cli
 
 script:
-  - ng test --watch false
-  - ng e2e
+  - ng test --watch=false
+  - ng lint
   - ng build --prod
 
 after_success:
