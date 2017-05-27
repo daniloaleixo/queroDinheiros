@@ -14,7 +14,8 @@ declare var Materialize:any;
 })
 export class LoginPageComponent implements OnInit {
 
-	registerMode: boolean = false;
+	registerMode: boolean;
+	showLoading: boolean;
 
 	formData = {
 		email: '',
@@ -23,23 +24,28 @@ export class LoginPageComponent implements OnInit {
 	}
 
   	constructor(private authService: AuthService, private router: Router) {
-	}
+      this.registerMode = false;
+      this.showLoading = false;
+    }
 
   	ngOnInit() {
   	}
 
   	login(): void {
+      this.showLoading = true;
   		this.authService.login(this.formData.email, this.formData.password).then(
   			(bla: firebase.User) => {
   				this.router.navigate(['/']);
   			},
   			(error: Error) => {
+          this.showLoading = false;
   				Materialize.toast(error.message, 4000, 'center');
   			}
   		);
   	}
 
   	register(): void {
+      this.showLoading = true;
   		this.authService.register(this.formData.email, this.formData.password)
   			.then((res) => this.authService.login(this.formData.email, this.formData.password))
   			.catch((error: Error) => {
@@ -48,11 +54,13 @@ export class LoginPageComponent implements OnInit {
   	}
 
   	loginGoogle(): void {
+      this.showLoading = true;
   		this.authService.loginGoogle().then(
   			(bla: firebase.User) => {
   				this.router.navigate(['/']);
   			},
   			(error: Error) => {
+          this.showLoading = false;
   				Materialize.toast(error.message, 4000, 'center');
   			}
   		);
