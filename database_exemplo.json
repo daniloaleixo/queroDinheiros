@@ -23,24 +23,12 @@
 					"currentSalary":"1500",
 					"percentageSalaryInvested":"42.62",
 					"surplus":"7.43",
-					"spendingPerCategories":[
-						{
-							"name":"Compras",
-							"amount":"100"
-						},
-						{
-							"name":"Comida",
-							"amount":"25.50"
-						},
-						{
-							"name":"Supermercado",
-							"amount":"76.40"
-						},
-						{
-							"name":"Transporte",
-							"amount":"106.47"
-						}
-					]
+					"spendingPerCategories":{
+						"Compras":"100",
+						"Comida":"25.50",
+						"Supermercado":"76.40",
+						"Transporte":"106.47"
+					}
 				}
 			}
 		}
