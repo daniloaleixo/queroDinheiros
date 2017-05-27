@@ -1,5 +1,7 @@
-<div id="content" class="background-img">
-<div class="mask"></div>
+<div style="background-color: black;"></div>
+<div id="content" class="background-img" style="position: absolute;
+    width: 100%;
+    height: 100%;">
 
 	<div class="row">
 		<div class="col s12 title" style="text-align:center;">
@@ -9,38 +11,32 @@
 			</h2>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row" style="display: flex;">
 
 
 	<!-- There are two forms, one will be the register and the other the login form
 		The idea is that when the user clicks "I don't have an account" the form switches
 		to register form -->
-	    <form class="col s12 white-banner">
+	    <form class="col s12 m5 l4 white-banner" style="margin: 0 auto;">
 		    <div class="input-content">
-		    	<!-- <div class="row register-form">
-		    	    <div class="input-field col s12">
-		    	      	<input id="nameInput" type="text" class="validate">
-		    	      	<label for="icon_telephone">Nome</label>
-		    	    </div>
-		    	</div> -->
 			    <div class="row" style="margin-bottom: 0px;">
 			        <div class="input-field col s12">
 			          	<!-- <i class="material-icons prefix">account_circle</i> -->
-			          	<input id="emailInput" type="email" class="validate">
+			          	<input name="email" [(ngModel)]="formData.email" type="email" class="validate">
 			          	<label for="icon_prefix">Email</label>
 			        </div>
 			    </div>
 			    <div class="row" style="margin-bottom: 0px;">
 			        <div class="input-field col s12">
 			          	<!-- <i class="material-icons prefix">phone</i> -->
-			          	<input id="passwordInput" type="password" class="validate">
+			          	<input name="password" [(ngModel)]="formData.password" type="password" class="validate">
 			          	<label for="icon_telephone">Password</label>
 			        </div>
 			    </div>
-			    <div class="row register-form">
+			    <div class="row register-form" *ngIf="registerMode">
 			        <div class="input-field col s12">
 			          	<!-- <i class="material-icons prefix">phone</i> -->
-			          	<input id="password2Input" type="password" class="validate">
+			          	<input name="password2" [(ngModel)]="formData.password2" type="password" class="validate">
 			          	<label for="icon_telephone">Repeat your Password</label>
 			        </div>
 			    </div>
@@ -48,28 +44,30 @@
 		    <!-- Divider -->
 		    <div style="margin-top:50px;"></div>
 
-		    <div class="row login-form">
+		    <div class="row login-form" *ngIf="!registerMode">
 		    	<div class="col s12">
 		    		<a id="login" class="waves-effect waves-light btn btn-block"
-		    			style="width: 100%">Login</a>
+		    			style="width: 100%" (click)="login()">Login</a>
 		    	</div>
 		    </div>
-		    <div class="row register-form">
+		    <div class="row register-form" *ngIf="registerMode">
 		    	<div class="col s12">
 		    		<a id="register" class="waves-effect waves-light btn btn-block"
-		    			style="width: 100%">Registrar</a>
+		    			style="width: 100%" (click)="register()">Registrar</a>
 		    	</div>
 		    </div>
 		    <div class="row">
 		    	<div class="col s12">
 		    		<a id="loginGoogle" class="waves-effect waves-light btn btn-block"
-		    			style="width: 100%">Entrar com o Google</a>
+		    			style="width: 100%" (click)="loginGoogle()">Entrar com o Google</a>
 		    	</div>
 		    </div>
 		    <div class="row">
-		    	<div class="col s12" style="cursor:pointer">
-		    		<a id="switchToRegisterForm" class="login-form">Ainda não possui uma conta?</a>
-	    			<a id="switchToLoginForm" class="register-form">Já possui uma conta?</a>
+		    	<div class="col s12" style="cursor:pointer;">
+		    		<a id="switchToRegisterForm" class="login-form" style="color:white;" 
+		    		(click)="registerMode = !registerMode">
+		    			{{ registerMode ? 'Já possui uma conta?' : 'Ainda não possui uma conta?' }}
+		    		</a>
 		    	</div>
 		    </div>
 	    		

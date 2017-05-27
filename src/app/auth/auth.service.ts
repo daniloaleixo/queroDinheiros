@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable()
 export class AuthService {
 
-	public isLogged = new BehaviorSubject<boolean>(true);
+	public isLogged = new BehaviorSubject<boolean>(false);
 
   	constructor() {
   		this.isLogged.publishReplay(1);

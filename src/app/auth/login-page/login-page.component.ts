@@ -7,9 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor() { }
+	registerMode: boolean = false;
 
-  ngOnInit() {
-  }
+	formData = {
+		email: '',
+		password: '',
+		password2: ''
+	}
+
+  	constructor() { }
+
+  	ngOnInit() {
+  	}
+
+  	login(): void {
+  		console.log('logar');
+  	}
+
+  	register(): void {
+  		console.log('logar');
+  	}
+
+  	loginGoogle(): void {
+  		console.log('logar');
+  	}
 
 }

@@ -9,6 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { SpendingsModule } from './spendings/spendings.module';
 import { InvestmentsModule } from './investments/investments.module';
 import { AuthModule } from './auth/auth.module';
+import { HomeComponent } from './home.component';
 
 import { appRoutes } from './app.routes';
 
@@ -16,7 +17,8 @@ import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
