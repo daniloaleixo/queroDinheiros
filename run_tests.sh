@@ -2,4 +2,4 @@
 
 ng test --watch=false
 ng lint
-ng e2e
+# ng e2e

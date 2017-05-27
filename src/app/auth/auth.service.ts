@@ -1,5 +1,7 @@
 import { Injectable, EventEmitter } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/publishReplay';
 import { AngularFireAuth, FirebaseAuthStateObservable } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 

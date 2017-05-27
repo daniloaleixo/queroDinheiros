@@ -5,7 +5,7 @@ import {} from 'materialize';
 import { MaterializeDirective, MaterializeAction } from 'angular2-materialize';
 import { Router } from '@angular/router';
 
-declare var Materialize:any;
+declare var Materialize: any;
 
 @Component({
   selector: 'app-login-page',
@@ -21,7 +21,7 @@ export class LoginPageComponent implements OnInit {
 		email: '',
 		password: '',
 		password2: ''
-	}
+	};
 
   	constructor(private authService: AuthService, private router: Router) {
       this.registerMode = false;
@@ -50,7 +50,7 @@ export class LoginPageComponent implements OnInit {
   			.then((res) => this.authService.login(this.formData.email, this.formData.password))
   			.catch((error: Error) => {
   				Materialize.toast(error.message, 4000, 'center');
-  			})
+  			});
   	}
 
   	loginGoogle(): void {

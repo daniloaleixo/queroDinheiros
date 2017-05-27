@@ -12,9 +12,9 @@ export class HomeComponent implements OnInit {
   	constructor(private authService: AuthService, private router: Router) {
   		this.authService.user.subscribe(
   			(auth) => {
-  				if(!auth) this.router.navigate(['/login']);
+          if (!auth) this.router.navigate(['/login']);
   			}
-  		)
+  		);
   	}
 
   	ngOnInit() {

@@ -9,7 +9,7 @@ export const appRoutes: Routes = [
 	{
 		path: '',
 		children: [
-			{ 
+			{
 				path: '',
 				redirectTo: 'spendings/add',
 				pathMatch: 'full'
@@ -33,7 +33,7 @@ export const appRoutes: Routes = [
 		path: 'login',
 		component: LoginPageComponent
 	},
-	{ 
+	{
 		path: '',
 		redirectTo: 'spendings/add',
 		pathMatch: 'full'
