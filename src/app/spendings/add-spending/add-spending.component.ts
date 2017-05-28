@@ -6,6 +6,7 @@ import { AuthService } from '../../auth/auth.service';
 import { IMyDpOptions } from 'mydatepicker';
 import { IDatepicker, UtilsService } from '../../shared/services/utils.service';
 import { BackgroundTasksService } from '../background-tasks.service';
+import { IAddSpending } from '../../shared/interfaces';
 
 
 declare var Materialize: any;
@@ -51,7 +52,7 @@ export class AddSpendingComponent implements OnInit {
     addSpending() {
       if (this.sendData.tags || this.sendData.amount || this.sendData.date) {
         this.showLoading = true;
-        this.sendData.tags = this.formData.tags;
+        this.sendData.tags = this.validateTags(this.formData.tags);
         this.sendData.amount = this.validateAmount(this.formData.amount);
         this.sendData.description = this.validateDescription(this.formData.description);
         this.sendData.date = this.validateDate(this.formData.date);
@@ -71,11 +72,15 @@ export class AddSpendingComponent implements OnInit {
             const sendSpendingToServer = debtsList.push(this.sendData)
             .then(
                 (res) => {
+
                   Materialize.toast('Gasto salvo com sucesso', 4000, 'center');
                   // This backgroung service will sum the value in all
                   // summaries (day, month and year) and update the new info
-                  this.backgroundTasksService
-                    .updateSummary(uid, this.year, this.month, this.day, this.sendData);
+                  // this.backgroundTasksService
+                  //   .updateSummary(uid, this.year, this.month, this.day,
+                  //                 this.sendData.amount, this.sendData.tags);
+                  this.clearSpedingsInputs();
+                  this.showLoading = false;
                 },
                 (error: Error) => Materialize.toast(error.message, 4000, 'center')
             );
@@ -84,15 +89,13 @@ export class AddSpendingComponent implements OnInit {
       } else {
         Materialize.toast('Por favor preencha todas as informações', 4000, 'center');
       }
-
-      this.clearSpedingsInputs();
-      this.showLoading = false;
     }
 
 
     validateTags(tags): string[] {
-      const tagsArray = tags.split(' ');
-      if (tagsArray.length > 0) return tagsArray;
+      const tagsArray = tags.split(' ').filter(tag => tag.length > 0);
+      if (tagsArray.length > 1) return tagsArray;
+      else if (tagsArray.length === 1) return [tagsArray];
       return [];
     }
 
@@ -122,11 +125,4 @@ export class AddSpendingComponent implements OnInit {
       this.formData = this.utils.getCurrentDate();
     }
 
-}
-
-export interface IAddSpending {
-  tags: string[];
-  amount: number;
-  description: string;
-  date: string;
 }

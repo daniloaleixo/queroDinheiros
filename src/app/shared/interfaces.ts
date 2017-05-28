@@ -1,5 +1,5 @@
 export interface ISummary {
-	spendingPerCategories: Object;
+	spendingPerCategories: any;
 	totalCredit: number;
 	totalDebit: number;
 }
