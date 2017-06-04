@@ -24,8 +24,8 @@ export class AddSpendingComponent implements OnInit {
       dateFormat: 'dd-mm-yyyy',
     };
 
-	  formData: any;
-    sendData: IAddSpending;
+	  formData: any;             // Responsible for getting the info from the view 
+    sendData: IAddSpending;    // Responsible for sending the data 
     showLoading: boolean;
 
     private year: string;
@@ -50,7 +50,7 @@ export class AddSpendingComponent implements OnInit {
     }
 
     addSpending() {
-      if (this.sendData.tags || this.sendData.amount || this.sendData.date) {
+      if (this.formData.tags && this.formData.amount) {
         this.showLoading = true;
         this.sendData.tags = this.validateTags(this.formData.tags);
         this.sendData.amount = this.validateAmount(this.formData.amount);
@@ -76,9 +76,8 @@ export class AddSpendingComponent implements OnInit {
                   Materialize.toast('Gasto salvo com sucesso', 4000, 'center');
                   // This backgroung service will sum the value in all
                   // summaries (day, month and year) and update the new info
-                  // this.backgroundTasksService
-                  //   .updateSummary(uid, this.year, this.month, this.day,
-                  //                 this.sendData.amount, this.sendData.tags);
+                  this.backgroundTasksService
+                    .updateSummary(uid, this.year, this.month, this.day, this.sendData.amount, this.sendData.tags);
                   this.clearSpedingsInputs();
                   this.showLoading = false;
                 },
@@ -122,7 +121,7 @@ export class AddSpendingComponent implements OnInit {
     clearSpedingsInputs(): void {
       Object.keys(this.formData).forEach((info) => this.formData[info] = '');
       Object.keys(this.sendData).forEach((info) => this.sendData[info] = '');
-      this.formData = this.utils.getCurrentDate();
+      this.formData.date = this.utils.getCurrentDate();
     }
 
 }

@@ -9,18 +9,26 @@ export class BackgroundTasksService {
 
   	public updateSummary(uid: string, year: string,	month: string,
   						day: string, amount: number, tags: string[]): void {
-  		const dayDBObj = this.db.object(`${uid}/${year}/${month}/${day}/summary`,
-  			{ preserveSnapshot: true });
-  		dayDBObj.subscribe(snapshot => {
-  		  	dayDBObj.set(this.createObjectToUpdate(snapshot, amount, tags))
-  		  		.then((success) => console.log('Day summary updated successfully'))
-  		  		.catch((error: Error) => console.log(error));
+
+  		// First sum the value to daily summary
+  		const daySummaryRef = this.db.object(`${uid}/${year}/${month}/${day}/summary`,{ preserveSnapshot: true });
+  		daySummaryRef.$ref.once('value', (snapshot) => {
+  			daySummaryRef.set(this.createObjectToUpdate(snapshot, amount, tags));
+  		});
+
+  		const monthSummaryRef = this.db.object(`${uid}/${year}/${month}/summary`,{ preserveSnapshot: true });
+  		monthSummaryRef.$ref.once('value', (snapshot) => {
+  			monthSummaryRef.set(this.createObjectToUpdate(snapshot, amount, tags));
+  		});
+
+  		const yearSummaryRef = this.db.object(`${uid}/${year}/summary`,{ preserveSnapshot: true });
+  		yearSummaryRef.$ref.once('value', (snapshot) => {
+  			yearSummaryRef.set(this.createObjectToUpdate(snapshot, amount, tags));
   		});
   	}
 
   	// Sum all the info to summary and return it to be updated
   	private createObjectToUpdate(snapshot, amount: number, tags: string[]): ISummary {
-  		console.log('createObjectToUpdate', amount, tags);
 
 	  	let dayInfo: ISummary;
 	  	if (snapshot.val())
@@ -44,8 +52,6 @@ export class BackgroundTasksService {
 	  		// Include in the total credit
 	  		dayInfo.totalCredit += + amount;
 	  	}
-
-		  console.log(dayInfo);
   		return dayInfo;
   	}
 
