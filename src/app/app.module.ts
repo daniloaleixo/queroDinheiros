@@ -11,6 +11,7 @@ import { InvestmentsModule } from './investments/investments.module';
 import { AuthModule } from './auth/auth.module';
 import { HomeComponent } from './home.component';
 import { AuthService } from './auth/auth.service';
+import { LayoutService } from './shared/layout/layout.service';
 
 import { appRoutes } from './app.routes';
 
@@ -40,7 +41,7 @@ import { MaterializeModule } from 'angular2-materialize';
     InvestmentsModule,
     AuthModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, LayoutService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

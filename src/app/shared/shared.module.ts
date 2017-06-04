@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './layout/header/header.component';
 import { RouterModule } from '@angular/router';
-import { LoadingComponent } from './loading/loading.component';
+import { LoadingComponent } from './layout/loading/loading.component';
+import { MaterializeModule } from 'angular2-materialize';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MaterializeModule
   ],
   declarations: [HeaderComponent, LoadingComponent],
   exports: [HeaderComponent, LoadingComponent]

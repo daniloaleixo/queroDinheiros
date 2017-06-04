@@ -1,0 +1,52 @@
+
+<nav class="nav-extended" [style.background-color]="layout.getHeaderColor()">
+  <div class="nav-wrapper">
+    <a [routerLink]="['/']" class="brand-logo" 
+        style="left: 50%; transform: translateX(-50%)">
+        {{ layout.getHeaderText() }}
+    </a>
+    <a materialize="sideNav" [materializeParams]="[{ draggable: true, closeOnClick:true}]"
+      [materializeActions]="sidenavActions" data-activates="sidenav"
+      style="float: left; margin-right: 15px; transform: translateY(-10%)"
+      class="btn-floating btn-flat waves-effect waves-light transparent">
+        <i class="material-icons">menu</i>
+    </a>
+
+
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li class="tab">
+        	<a routerLink="/spendings/add" [ngClass]="{'active': '/spendings/add' == currentRoute }">Adicionar</a>
+        </li>
+        <li class="tab">
+        	<a routerLink="/spendings/view" [ngClass]="{'active': '/spendings/view' == currentRoute }">Gastos</a>
+        </li>
+        <li class="tab">
+        	<a routerLink="/investments/view" [ngClass]="{'active': '/investments/view' == currentRoute }">Investimentos</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Side menu -->
+<div id="sidenav" class="side-nav">
+  <ul style="margin-top: 0px !important">
+    <li>
+      <div class="userView">
+            <div class="background">
+              <img src="../../assets/tela_login2.jpg">
+            </div>
+            <a><img class="circle" [src]="userInfo?.photoURL || '../../assets/avatar.png'"></a>
+            <a><span class="white-text name">{{ userInfo?.displayName || ''}}</span></a>
+            <a><span class="white-text email">{{ userInfo?.email }}</span></a>
+          </div>
+    </li>
+      <li *ngFor="let option of menuOptions">
+          <a [routerLink]="[option.link]">
+            {{option.description}}
+          </a>
+      </li>
+      <li class="logout-button"><a routerLink="/login"><i class="material-icons">input</i>Logout</a></li>
+  </ul>
+</div>

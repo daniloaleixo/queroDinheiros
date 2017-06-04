@@ -11,17 +11,17 @@ export class BackgroundTasksService {
   						day: string, amount: number, tags: string[]): void {
 
   		// First sum the value to daily summary
-  		const daySummaryRef = this.db.object(`${uid}/${year}/${month}/${day}/summary`,{ preserveSnapshot: true });
+  		const daySummaryRef = this.db.object(`${uid}/${year}/${month}/${day}/summary`, { preserveSnapshot: true });
   		daySummaryRef.$ref.once('value', (snapshot) => {
   			daySummaryRef.set(this.createObjectToUpdate(snapshot, amount, tags));
   		});
 
-  		const monthSummaryRef = this.db.object(`${uid}/${year}/${month}/summary`,{ preserveSnapshot: true });
+  		const monthSummaryRef = this.db.object(`${uid}/${year}/${month}/summary`, { preserveSnapshot: true });
   		monthSummaryRef.$ref.once('value', (snapshot) => {
   			monthSummaryRef.set(this.createObjectToUpdate(snapshot, amount, tags));
   		});
 
-  		const yearSummaryRef = this.db.object(`${uid}/${year}/summary`,{ preserveSnapshot: true });
+  		const yearSummaryRef = this.db.object(`${uid}/${year}/summary`, { preserveSnapshot: true });
   		yearSummaryRef.$ref.once('value', (snapshot) => {
   			yearSummaryRef.set(this.createObjectToUpdate(snapshot, amount, tags));
   		});

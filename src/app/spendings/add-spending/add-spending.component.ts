@@ -24,8 +24,8 @@ export class AddSpendingComponent implements OnInit {
       dateFormat: 'dd-mm-yyyy',
     };
 
-	  formData: any;             // Responsible for getting the info from the view 
-    sendData: IAddSpending;    // Responsible for sending the data 
+	  formData: any;             // Responsible for getting the info from the view
+    sendData: IAddSpending;    // Responsible for sending the data
     showLoading: boolean;
 
     private year: string;
