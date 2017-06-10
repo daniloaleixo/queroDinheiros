@@ -18,6 +18,10 @@ export class HeaderComponent implements OnInit {
 
   public userInfo: firebase.User;
   menuOptions: any = [
+    {
+      description: 'Configurações',
+      link: '/settings'
+    }
   ];
 
   constructor(public layout: LayoutService,

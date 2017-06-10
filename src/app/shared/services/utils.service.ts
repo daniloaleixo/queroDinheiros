@@ -1,13 +1,6 @@
 import { Injectable } from '@angular/core';
 
-
-export interface IDatepicker {
-	date: {
-		year: number,
-		month: number,
-		day: number
-	};
-}
+import { IDatepicker } from '../interfaces';
 
 @Injectable()
 export class UtilsService {

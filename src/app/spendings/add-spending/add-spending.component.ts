@@ -4,9 +4,9 @@ import { MaterializeDirective, MaterializeAction } from 'angular2-materialize';
 import { AngularFireDatabase, FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2/database';
 import { AuthService } from '../../auth/auth.service';
 import { IMyDpOptions } from 'mydatepicker';
-import { IDatepicker, UtilsService } from '../../shared/services/utils.service';
+import { UtilsService } from '../../shared/services/utils.service';
 import { BackgroundTasksService } from '../background-tasks.service';
-import { IAddSpending } from '../../shared/interfaces';
+import { IAddSpending, IDatepicker } from '../../shared/interfaces';
 
 
 declare var Materialize: any;

@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { SpendingsModule } from './spendings/spendings.module';
 import { InvestmentsModule } from './investments/investments.module';
+import { SettingsModule } from './settings/settings.module';
 import { AuthModule } from './auth/auth.module';
 import { HomeComponent } from './home.component';
 import { AuthService } from './auth/auth.service';
@@ -35,6 +36,7 @@ import { MaterializeModule } from 'angular2-materialize';
     MaterializeModule,
     BrowserModule,
     FormsModule,
+    SettingsModule,
     HttpModule,
     SharedModule,
     SpendingsModule,

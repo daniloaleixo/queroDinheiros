@@ -3,6 +3,7 @@ import { ViewInvestmentsComponent } from './investments/view-investments/view-in
 import { AddSpendingComponent } from './spendings/add-spending/add-spending.component';
 import { ViewSpendingsComponent } from './spendings/view-spendings/view-spendings.component';
 import { LoginPageComponent } from './auth/login-page/login-page.component';
+import { SettingsComponent } from './settings/settings.component';
 import { HomeComponent } from './home.component';
 
 export const appRoutes: Routes = [
@@ -25,6 +26,10 @@ export const appRoutes: Routes = [
 			{
 				path: 'investments/view',
 				component: ViewInvestmentsComponent
+			},
+			{
+				path: 'settings',
+				component: SettingsComponent
 			}
 		],
 		component: HomeComponent

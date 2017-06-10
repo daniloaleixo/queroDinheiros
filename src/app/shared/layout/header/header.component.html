@@ -12,8 +12,7 @@
         <i class="material-icons">menu</i>
     </a>
 
-
-    <div class="nav-content">
+    <div class="nav-content" *ngIf="layout.getShowTabs()">
       <ul class="tabs tabs-transparent">
         <li class="tab">
         	<a routerLink="/spendings/add" [ngClass]="{'active': '/spendings/add' == currentRoute }">Adicionar</a>

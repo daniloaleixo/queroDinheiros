@@ -10,3 +10,11 @@ export interface IAddSpending {
   description: string;
   date: string;
 }
+
+export interface IDatepicker {
+	date: {
+		year: number,
+		month: number,
+		day: number
+	};
+}
