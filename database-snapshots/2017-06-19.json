@@ -2097,6 +2097,125 @@
 	        },
 	        "5": {
 	            "debts": []
+	        },
+	        "6": {
+	            "debts": [
+	            	{
+	            	    "amount": "22,06", 
+	            	    "description": "casa kadri", 
+	            	    "tag": "comida"
+	            	},
+	            	{
+	            	    "amount": "8,50", 
+	            	    "description": "sorvete", 
+	            	    "tag": "comida"
+	            	},
+	            	{
+	            	    "amount": "31,80", 
+	            	    "description": "bike burger", 
+	            	    "tag": "comida"
+	            	},
+	            	{
+	            	    "amount": "22,50", 
+	            	    "description": "antena", 
+	            	    "tag": "role"
+	            	},
+	            	{
+	            	    "amount": "13,31", 
+	            	    "description": "magnitudes", 
+	            	    "tag": "comida"
+	            	},
+	            	{
+	            	    "amount": "19,44", 
+	            	    "description": "casa kadri", 
+	            	    "tag": "comida"
+	            	},
+	            	{
+	            	    "amount": "30", 
+	            	    "description": "celular", 
+	            	    "tag": "fixo"
+	            	},
+	            	{
+	            	    "amount": "16,45", 
+	            	    "description": "magnitudes", 
+	            	    "tag": "comida"
+	            	},
+	            	{
+	            	    "amount": "8,50", 
+	            	    "description": "sorvete", 
+	            	    "tag": "comida"
+	            	},
+	            	{
+	            	    "amount": "39", 
+	            	    "description": "Conta Itauau", 
+	            	    "tag": "fixo"
+	            	},
+	            	{
+	            	    "amount": "15", 
+	            	    "description": "padaria consolação", 
+	            	    "tag": "comida"
+	            	},
+	            	{
+	            	    "amount": "15", 
+	            	    "description": "antena", 
+	            	    "tag": "role"
+	            	},
+	            	{
+	            	    "amount": "10", 
+	            	    "description": "misto quente BRF", 
+	            	    "tag": "comida"
+	            	},
+	            	{
+	            	    "amount": "61,17", 
+	            	    "description": "DARE", 
+	            	    "tag": "outros"
+	            	},
+	            	{
+	            	    "amount": "5,50", 
+	            	    "description": "sorvete", 
+	            	    "tag": "comida"
+	            	},
+	            	{
+	            	    "amount": "11,66", 
+	            	    "description": "magnitudes", 
+	            	    "tag": "comida"
+	            	},
+	            	{
+	            	    "amount": "18", 
+	            	    "description": "almoço", 
+	            	    "tag": "comida"
+	            	},
+	            	{
+	            	    "amount": "84,90", 
+	            	    "description": "tinta impressora", 
+	            	    "tag": "compras"
+	            	},
+	            	{
+	            	    "amount": "19.06", 
+	            	    "description": "casa kadri", 
+	            	    "tag": "comida"
+	            	},
+	            	{
+	            	    "amount": "130", 
+	            	    "description": "remedio", 
+	            	    "tag": "compras"
+	            	},
+	            	{
+	            	    "amount": "26,21", 
+	            	    "description": "happy hour", 
+	            	    "tag": "role"
+	            	},
+	            	{
+	            	    "amount": "1800", 
+	            	    "description": "aula piano", 
+	            	    "tag": "compras"
+	            	},
+	            	{
+	            	    "amount": "500", 
+	            	    "description": "divida maes", 
+	            	    "tag": "outros"
+	            	}
+	            ]
 	        }
 	    }
 	}

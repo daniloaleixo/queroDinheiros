@@ -103,9 +103,8 @@ export class AddSpendingComponent implements OnInit {
       return [];
     }
 
-    validateAmount(amount): number {
-      // amount.replace(/,/g, '.');
-      return parseFloat(amount);
+    validateAmount(amount: string): number {
+      return parseFloat(amount.toString().replace(/,/g, '.'));
     }
 
     validateDescription(description): string {

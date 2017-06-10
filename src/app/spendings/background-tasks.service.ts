@@ -30,11 +30,9 @@ export class BackgroundTasksService {
   	// Sum all the info to summary and return it to be updated
   	private createObjectToUpdate(snapshot, amount: number, tags: string[]): ISummary {
 
-	  	let dayInfo: ISummary;
-	  	if (snapshot.val())
-	  		dayInfo = snapshot.val();
-	  	else
-	  		dayInfo = { spendingPerCategories: {}, totalCredit: 0, totalDebit: 0 };
+  		console.log('snapshot', snapshot.val());
+
+	  	const dayInfo = this.checkFields(snapshot);
 
 	  	// If it is debit we add to debit total
 	  	if (amount > 0) {
@@ -53,6 +51,20 @@ export class BackgroundTasksService {
 	  		dayInfo.totalCredit += + amount;
 	  	}
   		return dayInfo;
+  	}
+
+  	checkFields(snapshot): ISummary {
+  		let info: ISummary;
+
+  		if (snapshot.val()) {
+  			info = snapshot.val();
+  			if (!info.spendingPerCategories) info.spendingPerCategories = {};
+  			if (!info.totalCredit) info.totalCredit = 0;
+  			if (!info.totalDebit) info.totalDebit = 0;
+  		} else
+	  		info = { spendingPerCategories: {}, totalCredit: 0, totalDebit: 0 };
+
+  		return info;
   	}
 
 }
