@@ -13,8 +13,18 @@ export interface IAddSpending {
 
 export interface IDatepicker {
 	date: {
-		year: number,
-		month: number,
-		day: number
+		year: number;
+		month: number;
+		day: number;
 	};
+}
+
+export interface ISettings {
+	totalDebit: number;
+	totalCredit: number;
+	totalInvested: number;
+	currentSalary: number;
+	percentageSalaryInvested: number;
+	surplus: number;
+	spendingPerCategories: any;
 }

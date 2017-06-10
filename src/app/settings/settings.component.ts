@@ -10,7 +10,8 @@ declare var Materialize: any;
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
-  styleUrls: ['./settings.component.css']
+  styleUrls: ['./settings.component.css'],
+  providers: [ServerCommService]
 })
 export class SettingsComponent implements OnInit {
 

@@ -43,7 +43,7 @@
     </li>
       <li *ngFor="let option of menuOptions">
           <a [routerLink]="[option.link]">
-            {{option.description}}
+            <i class="material-icons">{{ option.icon }}</i>{{option.description}}
           </a>
       </li>
       <li class="logout-button"><a routerLink="/login"><i class="material-icons">input</i>Logout</a></li>

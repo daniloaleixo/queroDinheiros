@@ -20,7 +20,8 @@ export class HeaderComponent implements OnInit {
   menuOptions: any = [
     {
       description: 'Configurações',
-      link: '/settings'
+      link: '/settings',
+      icon: 'build'
     }
   ];
 
