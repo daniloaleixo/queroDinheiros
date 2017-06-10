@@ -15,7 +15,10 @@ export class AuthService {
   	constructor(public afAuth: AngularFireAuth) {
   		this.isLogged.publishReplay(1);
   		this.user = afAuth.authState;
-      this.user.subscribe((user) => this.uid.next(user.uid));
+      this.user.subscribe((user) => {
+        console.log('usuario', user);
+        this.uid.next(user.uid);
+      });
   	}
 
   	login(email: string, password: string) {

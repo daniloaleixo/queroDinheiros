@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { MaterializeDirective, MaterializeAction } from 'angular2-materialize';
 import { AngularFireDatabase, FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2/database';
 import { AuthService } from '../../auth/auth.service';
+import { LayoutService } from '../../shared/layout/layout.service';
+
+
 import { IMyDpOptions } from 'mydatepicker';
 import { UtilsService } from '../../shared/services/utils.service';
 import { BackgroundTasksService } from '../background-tasks.service';
@@ -34,6 +37,7 @@ export class AddSpendingComponent implements OnInit {
 
   	constructor(private db: AngularFireDatabase,
                 private auth: AuthService,
+                private layout: LayoutService,
                 private utils: UtilsService,
                 private backgroundTasksService: BackgroundTasksService) {
       this.formData = {
@@ -44,6 +48,7 @@ export class AddSpendingComponent implements OnInit {
       };
       this.showLoading = false;
       this.sendData = { tags: [''], amount: 0, description: '', date: '' };
+      this.layout.turnOnTabs();
     }
 
     ngOnInit() {

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { LayoutService } from '../../shared/layout/layout.service';
+
 @Component({
   selector: 'app-view-spendings',
   templateUrl: './view-spendings.component.html',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewSpendingsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private layout: LayoutService) {
+  	this.layout.turnOnTabs();
+  }
 
   ngOnInit() {
   }

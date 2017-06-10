@@ -27,21 +27,23 @@ export class ServerCommService {
 
       let returnValue: Observable<any> = Observable.of(null);
       this.auth.uid.subscribe(uid => {
-        const route =
-          `${uid}/${this.dateObject.date.year}/${this.dateObject.date.month}/summary`;
-        console.log('route', route);
+        if (uid) {
+          const route =
+            `${uid}/${this.dateObject.date.year}/${this.dateObject.date.month}/summary`;
+          console.log('route', route);
 
-        this.db
-    			.object(route)
-    			.update({ currentSalary: salary })
-          .then((res) => {
-            returnValue = Observable.of(res);
-            this.layout.turnOffLoading();
-          })
-          .catch(error => {
-            returnValue = Observable.of(error);
-            this.layout.turnOffLoading();
-          });
+          this.db
+      			.object(route)
+      			.update({ currentSalary: salary })
+            .then((res) => {
+              returnValue = Observable.of(res);
+              this.layout.turnOffLoading();
+            })
+            .catch(error => {
+              returnValue = Observable.of(error);
+              this.layout.turnOffLoading();
+            });
+        }
       });
 
 
