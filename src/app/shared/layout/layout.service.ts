@@ -10,7 +10,7 @@ export class LayoutService {
   showLoading: boolean;
 
   	constructor() {
-  		this.headerColor = '#ee6e73';
+  		this.headerColor = '#003c6b';
     	this.headerText = 'QueroDinheiros';
       this.showTabs = true;
       this.showLoading = false;
