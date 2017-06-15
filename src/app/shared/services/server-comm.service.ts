@@ -46,11 +46,35 @@ export class ServerCommService {
         }
       });
 
-
-
-
-
       return returnValue;
   	}
+
+
+    calculateMonthlySpent(): number {
+      let spentMonth = 0;
+
+      this.auth.uid.subscribe((uid: string) => {
+        if (uid) {
+          console.log(uid);
+          this.db.object(
+            `/${uid}/${this.dateObject.date.year}/${this.dateObject.date.month}`,
+          { preserveSnapshot: true })
+          .$ref.on('value', (snapshot) => {
+
+            Object.keys(snapshot.val()).forEach(day => {
+              if (day !== 'summary') {
+                Object.keys(snapshot.val()[day]['debts']).forEach(
+                spending => {
+                  const spent: number =
+                    this.utils.transformCurrency((snapshot.val()[day]['debts'][spending]['amount']));
+                  if (spent) spentMonth += spent;
+                });
+              }
+            });
+          });
+        }
+      });
+      return spentMonth;
+    }
 
 }

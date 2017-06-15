@@ -18,5 +18,9 @@ export class UtilsService {
   		};
   	}
 
+    transformCurrency(value: string): number {
+      return parseFloat(value.toString().replace(/,/g, '.'));
+    }
+
 }
 

@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { MyDatePickerModule } from 'mydatepicker';
 
+import { ServerCommService } from '../shared/services/server-comm.service';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,7 @@ import { MyDatePickerModule } from 'mydatepicker';
     BrowserModule,
     MyDatePickerModule
   ],
-  declarations: [AddSpendingComponent, ViewSpendingsComponent]
+  declarations: [AddSpendingComponent, ViewSpendingsComponent],
+  providers: [ServerCommService]
 })
 export class SpendingsModule { }
