@@ -79,6 +79,7 @@ export class ServerCommService {
                 const spent: number =
                   this.utils.transformCurrency((snapshot.val()[day]['debts'][spending]['amount']));
                 if (spent) spentMonth += spent;
+                console.log(spentMonth);
               });
             }
           });
@@ -123,6 +124,20 @@ export class ServerCommService {
             },
             (error: Error) => reject(Error('Erro ao salvar gasto')));
         } else reject(Error('Erro ao salvar gasto'));
+      });
+    });
+  }
+
+  getCurrentSummary(): Promise<ISettings> {
+    return new Promise((resolve, reject) => {
+      this.auth.uid.subscribe((uid: string) => {
+        if (uid) {
+          this.db.object(`${uid}/${this.dateObject.date.year}/${this.dateObject.date.month}/summary`)
+          .$ref.on('value', (snapshot) => {
+            console.log(snapshot.val());
+            resolve(snapshot.val());
+          });
+        }
       });
     });
   }

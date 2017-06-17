@@ -27,11 +27,11 @@ export interface IDatepicker {
 }
 
 export interface ISettings {
-	totalDebit: number;
-	totalCredit: number;
-	totalInvested: number;
-	currentSalary: number;
-	percentageSalaryInvested: number;
-	surplus: number;
-	spendingPerCategories: any;
+	totalDebit?: number;
+	totalCredit?: number;
+	totalInvested?: number;
+	currentSalary?: number;
+	percentageSalaryInvested?: number;
+	surplus?: number;
+	spendingPerCategories?: any;
 }

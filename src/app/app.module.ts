@@ -23,6 +23,9 @@ import { environment } from '../environments/environment';
 import { MaterializeModule } from 'angular2-materialize';
 
 
+import { CurrentMonthService } from './singletons/current-month.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +46,7 @@ import { MaterializeModule } from 'angular2-materialize';
     InvestmentsModule,
     AuthModule
   ],
-  providers: [AuthService, LayoutService],
+  providers: [AuthService, LayoutService, CurrentMonthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
