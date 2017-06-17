@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 import { MaterializeDirective, MaterializeAction } from 'angular2-materialize';
-import { AngularFireDatabase, FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2/database';
-import { AuthService } from '../../auth/auth.service';
 import { LayoutService } from '../../shared/layout/layout.service';
 
 
 import { IMyDpOptions } from 'mydatepicker';
 import { UtilsService } from '../../shared/services/utils.service';
-import { BackgroundTasksService } from '../background-tasks.service';
-import { IAddSpending, IDatepicker } from '../../shared/interfaces';
+import { IAddSpending, IDatepicker, IFormAddSpending } from '../../shared/interfaces';
+import { SpendingsService } from '../spendings.service';
+import { ServerCommService } from '../../shared/services/server-comm.service';
 
 
 declare var Materialize: any;
@@ -18,114 +17,57 @@ declare var Materialize: any;
   selector: 'app-add-spending',
   templateUrl: './add-spending.component.html',
   styleUrls: ['./add-spending.component.css'],
-  providers: [UtilsService, BackgroundTasksService]
+  providers: [UtilsService]
 })
 export class AddSpendingComponent implements OnInit {
 
-    myDatePickerOptions: IMyDpOptions = {
-      // other options...
-      dateFormat: 'dd-mm-yyyy',
+  myDatePickerOptions: IMyDpOptions = {
+    // other options...
+    dateFormat: 'dd-mm-yyyy',
+  };
+
+  formData: IFormAddSpending; // Responsible for getting the info from the view
+  showLoading: boolean;
+
+	constructor(private layout: LayoutService,
+              private utils: UtilsService,
+              private serverCommService: ServerCommService,
+              private spendingsService: SpendingsService) {
+    this.formData = {
+      tags: '',
+      amount: '',
+      description: '',
+      date: this.utils.getCurrentDate()
     };
+    this.showLoading = false;
+    this.layout.turnOnTabs();
+  }
 
-	  formData: any;             // Responsible for getting the info from the view
-    sendData: IAddSpending;    // Responsible for sending the data
-    showLoading: boolean;
+  ngOnInit() {
+  }
 
-    private year: string;
-    private month: string;
-    private day: string;
+  addSpending() {
+    if (this.formData.tags && this.formData.amount) {
+      this.showLoading = true;
 
-  	constructor(private db: AngularFireDatabase,
-                private auth: AuthService,
-                private layout: LayoutService,
-                private utils: UtilsService,
-                private backgroundTasksService: BackgroundTasksService) {
-      this.formData = {
-        tags: '',
-        amount: '',
-        description: '',
-        date: this.utils.getCurrentDate()
-      };
-      this.showLoading = false;
-      this.sendData = { tags: [''], amount: 0, description: '', date: '' };
-      this.layout.turnOnTabs();
+      this.serverCommService.addSpending(this.formData)
+          .then(
+              (res) => {
+                Materialize.toast(res, 4000, 'center');
+                this.clearSpedingsInputs();
+                this.showLoading = false;
+              },
+              (error: Error) => Materialize.toast(error.message, 4000, 'center')
+          );
+    } else {
+      Materialize.toast('Por favor preencha todas as informações', 4000, 'center');
     }
-
-    ngOnInit() {
-    }
-
-    addSpending() {
-      if (this.formData.tags && this.formData.amount) {
-        this.showLoading = true;
-        this.sendData.tags = this.validateTags(this.formData.tags);
-        this.sendData.amount = this.validateAmount(this.formData.amount);
-        this.sendData.description = this.validateDescription(this.formData.description);
-        this.sendData.date = this.validateDate(this.formData.date);
+  }
 
 
-        console.log('enviar pro server', this.sendData);
-        // Wait to system to login and then get the database
-        this.auth.uid.subscribe((uid: string) => {
-          // First I have to get all the objects from server that I will need
-          //  And I need the summary of the day, month and year
-          // To add the new value to those infos
-          if (uid) {
-            const debtsList: FirebaseListObservable<any> =
-            this.db.list(`${uid}/${this.year}/${this.month}/${this.day}/debts/`);
-
-            // Send te spending to Firebase
-            const sendSpendingToServer = debtsList.push(this.sendData)
-            .then(
-                (res) => {
-
-                  Materialize.toast('Gasto salvo com sucesso', 4000, 'center');
-                  // This backgroung service will sum the value in all
-                  // summaries (day, month and year) and update the new info
-                  this.backgroundTasksService
-                    .updateSummary(uid, this.year, this.month, this.day, this.sendData.amount, this.sendData.tags);
-                  this.clearSpedingsInputs();
-                  this.showLoading = false;
-                },
-                (error: Error) => Materialize.toast(error.message, 4000, 'center')
-            );
-          }
-        });
-      } else {
-        Materialize.toast('Por favor preencha todas as informações', 4000, 'center');
-      }
-    }
-
-
-    validateTags(tags): string[] {
-      const tagsArray = tags.split(' ').filter(tag => tag.length > 0);
-      if (tagsArray.length > 1) return tagsArray;
-      else if (tagsArray.length === 1) return [tagsArray];
-      return [];
-    }
-
-    validateAmount(amount: string): number {
-      return parseFloat(amount.toString().replace(/,/g, '.'));
-    }
-
-    validateDescription(description): string {
-        if (description.length === 0) return 'null';
-        return description;
-    }
-
-    validateDate(date: IDatepicker): string {
-     this.day = date.date.day.toString();
-     if (date.date.month < 10) this.month = date.date.month.toString();
-     else this.month = date.date.month.toString();
-     this.year = date.date.year.toString();
-
-     return this.day + '-' + this.month + '-' + this.year;
-    }
-
-
-    clearSpedingsInputs(): void {
-      Object.keys(this.formData).forEach((info) => this.formData[info] = '');
-      Object.keys(this.sendData).forEach((info) => this.sendData[info] = '');
-      this.formData.date = this.utils.getCurrentDate();
-    }
+  clearSpedingsInputs(): void {
+    Object.keys(this.formData).forEach((info) => this.formData[info] = '');
+    this.formData.date = this.utils.getCurrentDate();
+  }
 
 }

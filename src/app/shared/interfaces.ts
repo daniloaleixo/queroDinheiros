@@ -11,6 +11,13 @@ export interface IAddSpending {
   date: string;
 }
 
+export interface IFormAddSpending {
+  tags: string;
+  amount: string;
+  description: string;
+  date: IDatepicker;
+}
+
 export interface IDatepicker {
 	date: {
 		year: number;

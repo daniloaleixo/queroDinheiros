@@ -8,6 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MyDatePickerModule } from 'mydatepicker';
 
 import { ServerCommService } from '../shared/services/server-comm.service';
+import { SpendingsService } from './spendings.service';
 
 @NgModule({
   imports: [
@@ -18,6 +19,6 @@ import { ServerCommService } from '../shared/services/server-comm.service';
     MyDatePickerModule
   ],
   declarations: [AddSpendingComponent, ViewSpendingsComponent],
-  providers: [ServerCommService]
+  providers: [ServerCommService, SpendingsService]
 })
 export class SpendingsModule { }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IAddSpending, ISummary } from '../shared/interfaces';
+import { IAddSpending, ISummary } from '../interfaces';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 
 @Injectable()

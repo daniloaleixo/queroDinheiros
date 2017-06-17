@@ -1,0 +1,1945 @@
+{
+  "CpLSvM5t9lTDbMyydika4Cdq4Ek1" : {
+    "2017" : {
+      "5" : {
+        "2" : {
+          "debts" : [ {
+            "amount" : "100",
+            "description" : "Kindle",
+            "tags" : [ "compras" ]
+          }, {
+            "amount" : "25.50",
+            "description" : "Bacio di Latte",
+            "tags" : [ "Comida" ]
+          } ]
+        },
+        "summary" : {
+          "currentSalary" : "1500",
+          "percentageSalaryInvested" : "42.62",
+          "spendingPerCategories" : {
+            "Comida" : "25.50",
+            "Compras" : "100",
+            "Supermercado" : "76.40",
+            "Transporte" : "106.47"
+          },
+          "surplus" : "7.43",
+          "totalCredit" : "300",
+          "totalDebit" : "125.50",
+          "totalInvested" : "651"
+        }
+      },
+      "6" : {
+        "15" : {
+          "debts" : {
+            "-KmgzFRmPREG0blrCoyr" : {
+              "amount" : 3443,
+              "date" : "15-6-2017",
+              "description" : "dsadasd",
+              "tags" : [ [ "nova" ] ]
+            },
+            "-Kmh2EF1hfxGIakjagF7" : {
+              "amount" : 432,
+              "date" : "15-6-2017",
+              "description" : "4324",
+              "tags" : [ [ "ds43" ] ]
+            },
+            "-Kmh2GPlFwvHmVUwC9H2" : {
+              "amount" : 100,
+              "date" : "15-6-2017",
+              "description" : "43423",
+              "tags" : [ [ "5345" ] ]
+            }
+          },
+          "summary" : {
+            "spendingPerCategories" : {
+              "tag" : 3975
+            },
+            "totalCredit" : 0,
+            "totalDebit" : 3975
+          }
+        },
+        "summary" : {
+          "spendingPerCategories" : {
+            "tag" : 3975
+          },
+          "totalCredit" : 0,
+          "totalDebit" : 3975
+        }
+      },
+      "summary" : {
+        "spendingPerCategories" : {
+          "tag" : 3975
+        },
+        "totalCredit" : 0,
+        "totalDebit" : 3975
+      }
+    }
+  },
+  "KKPil63sXneAR0fQwfQuRJRr2n42" : {
+    "2015" : [ null, null, null, [ null, {
+      "debts" : [ {
+        "amount" : "R$ 100,00",
+        "description" : "kindle",
+        "tag" : "Compras"
+      }, {
+        "amount" : "Role",
+        "description" : "R$ 60,00",
+        "tag" : "dinheiro mae"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 4,50",
+        "description" : "grecime",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 10,00",
+        "description" : "saque",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 30,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "bacio di latte",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 11,60",
+        "description" : "londrina",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 24,50",
+        "description" : "londrina",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 6,00",
+        "description" : "londrina",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "Festeca",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "BA",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 204,00",
+        "description" : "passagem",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 100,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 16,60",
+        "description" : "comida",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 8,00",
+        "description" : "sirio",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 30,00",
+        "description" : "kerubim",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 24,00",
+        "description" : "boleto",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "saque",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 30,00",
+        "description" : "saque",
+        "tag" : "Role"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "R$ 20,00",
+        "description" : "saque",
+        "tag" : "Role"
+      }, {
+        "amount" : "Compras",
+        "description" : "R$ 40,00",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 40,00",
+        "description" : "relogio e fone",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 14,00",
+        "description" : "bdl",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 11,00",
+        "description" : "cinema",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 13,00",
+        "description" : "pipoca",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 30,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "saque",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 33,00",
+        "description" : "cabelo",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 148,50",
+        "description" : "ingressos BA",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 145,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 27,00",
+        "description" : "*lente fisheye",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 340,00",
+        "description" : "interpsico",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 30,00",
+        "description" : "cel",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 48,50",
+        "description" : "*oculos",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 30,00",
+        "description" : "beco",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 18,00",
+        "description" : "cerva grifo",
+        "tag" : "Role"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "R$ 450,00",
+        "description" : "Juca(guardado)",
+        "tag" : "Role"
+      }, {
+        "amount" : "BU",
+        "description" : "R$ 20,00",
+        "tag" : "MadMax +pipoca"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "calças",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 18,61",
+        "description" : "*fone de ouvido",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 36,00",
+        "description" : "taxi",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 21,00",
+        "description" : "pao de açucar",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 14,29",
+        "description" : "Cafe copenhagem",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "BU leandro",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 40,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 49,00",
+        "description" : "mae",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 9,00",
+        "description" : "sapos",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 26,20",
+        "description" : "niver Amanda",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 48,00",
+        "description" : "Paletas Indaiatuba",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 40,00",
+        "description" : "saque",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 149,15",
+        "description" : "meia",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "saque",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 21,00",
+        "description" : "Bike Burger",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 18,61",
+        "description" : "Nao sei",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 70,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 17,59",
+        "description" : "pao de açucar",
+        "tag" : "Role"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "R$ 20,00",
+        "description" : "celular",
+        "tag" : "Compras"
+      }, {
+        "amount" : "Role",
+        "description" : "R$ 76,00",
+        "tag" : "Cerveja Flavio"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "BU leandro",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "Gas",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 69,00",
+        "description" : "Juca Restante",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 118,78",
+        "description" : "Remedio",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 82,00",
+        "description" : "Sque JUca",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 209,00",
+        "description" : "Bota",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 8,00",
+        "description" : "Lanches",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 45,00",
+        "description" : "tequikada BA",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 120,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "Celular",
+        "tag" : "Compras"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "R$ 18,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "Role",
+        "description" : "R$ 33,50",
+        "tag" : "Paintball"
+      }, {
+        "amount" : "R$ 24,20",
+        "description" : "Bebida Cafofo",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 70,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 105,80",
+        "description" : "Pass. Londrina",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 90,00",
+        "description" : "Saque Londrina",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 80,00",
+        "description" : "Calça",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "Gasosa",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 50,88",
+        "description" : "Londrina Roles",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 24,64",
+        "description" : "Londrina Pizza",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 8,10",
+        "description" : "Sapos",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 185,88",
+        "description" : "Remedio",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 17,15",
+        "description" : "Sobremesa Itau",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 277,00",
+        "description" : "PC",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 80,00",
+        "description" : "Blitz",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 11,00",
+        "description" : "Cinema",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 500,00",
+        "description" : "Viagem",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "Celular",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 14,92",
+        "description" : "Anti alergico",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 63,80",
+        "description" : "Janta Bonete",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 94,09",
+        "description" : "Mercado/Almoços",
+        "tag" : "Comida"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "R$ 60,00",
+        "description" : "Inferno",
+        "tag" : "Role"
+      }, {
+        "amount" : "Role",
+        "description" : "R$ 65,00",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 15,00",
+        "description" : "Gasosa",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "Subway",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 6,50",
+        "description" : "Grecime",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 33,00",
+        "description" : "Cabelo",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 90,00",
+        "description" : "Camisa",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 30,00",
+        "description" : "Belas Artes",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 35,00",
+        "description" : "Calças Ajust",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 100,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 28,00",
+        "description" : "Celular",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "Bandejao",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 120,00",
+        "description" : "Faueca",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 30,00",
+        "description" : "Rio Verde",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 40,00",
+        "description" : "Bandeco",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 5,00",
+        "description" : "Unifesp",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 280,00",
+        "description" : "Interunesp 1",
+        "tag" : "Role"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "R$ 80,00",
+        "description" : "Interunesp 2",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 68,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "CElular",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 55,00",
+        "description" : "BA",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 12,00",
+        "description" : "Role",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 14,50",
+        "description" : "Boliche",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 90,00",
+        "description" : "Bu",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "Gasosa",
+        "tag" : "Role"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "R$ 11,00",
+        "description" : "sorvete",
+        "tag" : "Comida"
+      }, {
+        "amount" : "Role",
+        "description" : "R$ 44,00",
+        "tag" : "Vaca"
+      }, {
+        "amount" : "R$ 3,30",
+        "description" : "Lanche",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 90,00",
+        "description" : "Blitz",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "Celular",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 40,00",
+        "description" : "Livro mae",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 16,00",
+        "description" : "Breja Mirante",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 100,00",
+        "description" : "Cartao Bom",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 25,00",
+        "description" : "Bandejao",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 45,00",
+        "description" : "Dinheiro mae",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 60,00",
+        "description" : "Dinheiro 25 de marco",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 13,00",
+        "description" : "celular",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 40,00",
+        "description" : "Augusta",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 45,75",
+        "description" : "Vila Mada",
+        "tag" : "Role"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "R$ 20,00",
+        "description" : "Belas Artes",
+        "tag" : "Role"
+      }, {
+        "amount" : "Role",
+        "description" : "R$ 90,00",
+        "tag" : "Celular"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 185,69",
+        "description" : "Inter",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 15,00",
+        "description" : "Celular",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 40,00",
+        "description" : "Bandejao",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "QIB",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 49,00",
+        "description" : "Suspensorio",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 15,00",
+        "description" : "Cafofo",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 13,80",
+        "description" : "custodia",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 35,00",
+        "description" : "shack",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 47,79",
+        "description" : "Old",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 42,62",
+        "description" : "Veloso",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 520,00",
+        "description" : "UP",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "Celular",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 1.250,00",
+        "description" : "GoPro",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 10,00",
+        "description" : "Bacio",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 40,00",
+        "description" : "Beco",
+        "tag" : "Roles"
+      }, {
+        "amount" : "R$ 30,00",
+        "description" : "BU",
+        "tag" : "BU"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "R$ 20,00",
+        "description" : "BU",
+        "tag" : "Bu"
+      }, {
+        "amount" : "Compras",
+        "description" : "R$ 20,00",
+        "tag" : "UP"
+      }, {
+        "amount" : "R$ 33,00",
+        "description" : "Cabelo",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 58,00",
+        "description" : "Cartao SD",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 90,00",
+        "description" : "Bateria Extra",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 230,00",
+        "description" : "EDC",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 59,10",
+        "description" : "DX",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 60,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 40,00",
+        "description" : "1007",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 797,90",
+        "description" : "Passagem",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "Celular",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 10,00",
+        "description" : "Bacio",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 39,73",
+        "description" : "Cadillac",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "Presente",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 12,90",
+        "description" : "Sorvete",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 16,00",
+        "description" : "Karaoke",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 12,30",
+        "description" : "Breja",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 113,96",
+        "description" : "Carrefour(barraca)",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 20,50",
+        "description" : "proteçao",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 79,98",
+        "description" : "Decathlon",
+        "tag" : "Compras"
+      } ]
+    } ] ],
+    "2016" : [ null, [ null, {
+      "debts" : [ {
+        "amount" : "R$ 146,83",
+        "description" : "Vale transporte",
+        "tag" : "Compras"
+      }, {
+        "amount" : "Role",
+        "description" : "R$ 662,48",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 948,30",
+        "description" : "Morro",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "Cinema",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "Celular",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 56,76",
+        "description" : "Gracia",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 56,28",
+        "description" : "Vila seu justino",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "Acessorios Gopro",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 30,00",
+        "description" : "1007",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 100,00",
+        "description" : "BU",
+        "tag" : "BU"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "R$ 13,50",
+        "description" : "Catu",
+        "tag" : "Role"
+      }, {
+        "amount" : "BU",
+        "description" : "R$ 40,00",
+        "tag" : "Tenis cent"
+      }, {
+        "amount" : "R$ 30,00",
+        "description" : "Veloso",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "Fantasia",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 90,00",
+        "description" : "Saque",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 60,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 21,31",
+        "description" : "Carrefour",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 60,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 30,00",
+        "description" : "Celular",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 33,88",
+        "description" : "Bar Vi",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "USP",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 16,50",
+        "description" : "Faria Lima",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 26,60",
+        "description" : "Renovacao BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 54,00",
+        "description" : "Calça",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 68,00",
+        "description" : "Reserva Uba",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 40,00",
+        "description" : "Urubu",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 90,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "USP",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 26,00",
+        "description" : "Joaquina",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 5,00",
+        "description" : "Posto",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 21,00",
+        "description" : "Caderno",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 100,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 12,60",
+        "description" : "Farmaci",
+        "tag" : "Compras"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "R$ 42,48",
+        "description" : "Uber",
+        "tag" : "Role"
+      }, {
+        "amount" : "Compras",
+        "description" : "R$ 94,66",
+        "tag" : "Mercadao"
+      }, {
+        "amount" : "R$ 30,00",
+        "description" : "augusta",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 45,00",
+        "description" : "Acromania",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 30,00",
+        "description" : "Festeca",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 60,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "Bandejao",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 40,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 3,20",
+        "description" : "Lanche",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 32,00",
+        "description" : "Calça",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 200,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 13,80",
+        "description" : "custodia",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 8,00",
+        "description" : "mercado",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 63,91",
+        "description" : "fone/presente",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 17,22",
+        "description" : "uber",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 70,00",
+        "description" : "festeca",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 40,00",
+        "description" : "festeca pai",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 100,00",
+        "description" : "teclado",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 44,75",
+        "description" : "remedio",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 33,00",
+        "description" : "Cabelo",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "Gasosa",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 10,00",
+        "description" : "Rifa",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "Fonte",
+        "tag" : "Compras"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "R$ 30,00",
+        "description" : "Celular",
+        "tag" : "Compras"
+      }, {
+        "amount" : "Comida",
+        "description" : "R$ 81,40",
+        "tag" : "desmame"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "Bandejao",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 150,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "Calças",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "Tenis",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 10,00",
+        "description" : "Max",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 33,00",
+        "description" : "1007",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 275,00",
+        "description" : "Paraquedas",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 30,00",
+        "description" : "Tatui",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 13,80",
+        "description" : "Custodia",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 750,00",
+        "description" : "interpsico",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 36,87",
+        "description" : "compras inter",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 127,02",
+        "description" : "gasosa inter",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 60,00",
+        "description" : "BU",
+        "tag" : "BU"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "R$ 30,00",
+        "description" : "Celular",
+        "tag" : "Compras"
+      }, {
+        "amount" : "Role",
+        "description" : "R$ 45,00",
+        "tag" : "Uber"
+      }, {
+        "amount" : "R$ 16,68",
+        "description" : "brwja masp",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 8,86",
+        "description" : "uber",
+        "tag" : "role"
+      }, {
+        "amount" : "R$ 39,91",
+        "description" : "uber ana",
+        "tag" : "role"
+      }, {
+        "amount" : "R$ 140,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 50,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 44,50",
+        "description" : "role ana",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 16,25",
+        "description" : "bar",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 55,70",
+        "description" : "Dia das maes",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 40,00",
+        "description" : "Desmame canela",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 100,00",
+        "description" : "BU",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 15,80",
+        "description" : "custodia",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "neu",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 16,00",
+        "description" : "pao de acucar",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 500,00",
+        "description" : "Juca",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 8,80",
+        "description" : "uber",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 28,50",
+        "description" : "mc",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 44,75",
+        "description" : "Finasterida",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 33,18",
+        "description" : "carrefour ana",
+        "tag" : "Role"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "R$ 149,51",
+        "description" : "juca",
+        "tag" : "Role"
+      }, {
+        "amount" : "Transporte",
+        "description" : "R$ 53,67",
+        "tag" : "Cel"
+      }, {
+        "amount" : "R$ 30,00",
+        "description" : "Celular",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 140,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 70,00",
+        "description" : "Kindle",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 150,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 80,00",
+        "description" : "festa",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 25,00",
+        "description" : "desmanche",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 15,80",
+        "description" : "custodia",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 16,00",
+        "description" : "caldeiras",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 53,81",
+        "description" : "uber",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 55,00",
+        "description" : "BA",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 65,00",
+        "description" : "Calca",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 66,00",
+        "description" : "Fralda",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 14,90",
+        "description" : "spotify",
+        "tag" : "Compras"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "R$ 140,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "Compras",
+        "description" : "R$ 30,00",
+        "tag" : "ludus"
+      }, {
+        "amount" : "R$ 56,00",
+        "description" : "remedio",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 40,00",
+        "description" : "Gasosa praia",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 77,32",
+        "description" : "carrefour",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 34,35",
+        "description" : "carrefour",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 14,90",
+        "description" : "spotify",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 15,80",
+        "description" : "custodia",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 10,00",
+        "description" : "opcao",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "1007",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 28,77",
+        "description" : "dona deola",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 192,77",
+        "description" : "kabum",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 42,00",
+        "description" : "praia",
+        "tag" : "Role"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "R$ 30,00",
+        "description" : "cel",
+        "tag" : "Compras"
+      }, {
+        "amount" : "Role",
+        "description" : "R$ 81,64",
+        "tag" : "presente pai"
+      }, {
+        "amount" : "R$ 14,78",
+        "description" : "extra breja",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 30,00",
+        "description" : "calefacao",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 170,00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "R$ 91,97",
+        "description" : "deca",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 3,10",
+        "description" : "sorvetr",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 20,00",
+        "description" : "gasosa",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 5,49",
+        "description" : "refri",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 30,00",
+        "description" : "neu",
+        "tag" : "Role"
+      }, {
+        "amount" : "R$ 21,50",
+        "description" : "decathlon",
+        "tag" : "Compras"
+      }, {
+        "amount" : "R$ 14,00",
+        "description" : "burger",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 11,00",
+        "description" : "Bacio",
+        "tag" : "Comida"
+      }, {
+        "amount" : "R$ 400,00",
+        "description" : "Jaqueta",
+        "tag" : "Compras"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "$40.00",
+        "description" : "fone",
+        "tag" : "Compras"
+      }, {
+        "amount" : "Compras",
+        "description" : "107,6",
+        "tag" : "cel"
+      }, {
+        "amount" : "$26.00",
+        "description" : "mercadinho",
+        "tag" : "Role"
+      }, {
+        "amount" : "22,5",
+        "description" : "pao de acucar",
+        "tag" : "Role"
+      }, {
+        "amount" : "89,43",
+        "description" : "carrefour",
+        "tag" : "Role"
+      }, {
+        "amount" : "$150.00",
+        "description" : "urubu",
+        "tag" : "BU"
+      }, {
+        "amount" : "$100.00",
+        "description" : "mae onibus",
+        "tag" : "BU"
+      }, {
+        "amount" : "$120.00",
+        "description" : "abate",
+        "tag" : "Role"
+      }, {
+        "amount" : "43,3",
+        "description" : "niver nathi",
+        "tag" : "Role"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "$90.00",
+        "description" : "urubu",
+        "tag" : "BU"
+      }, {
+        "amount" : "$90.00",
+        "description" : "presente mae",
+        "tag" : "Compras"
+      }, {
+        "amount" : "$50.00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "24,76",
+        "description" : "coop",
+        "tag" : "Role"
+      }, {
+        "amount" : "6,15",
+        "description" : "sorvete",
+        "tag" : "Comida"
+      }, {
+        "amount" : "$130.00",
+        "description" : "remedio",
+        "tag" : "Compras"
+      }, {
+        "amount" : "$80.00",
+        "description" : "BU",
+        "tag" : "BU"
+      }, {
+        "amount" : "43,1",
+        "description" : "bar",
+        "tag" : "Role"
+      }, {
+        "amount" : "36,5",
+        "description" : "bar",
+        "tag" : "Role"
+      }, {
+        "amount" : "38,01",
+        "description" : "jucalemao",
+        "tag" : "Comida"
+      }, {
+        "amount" : "30,5",
+        "description" : "pinga",
+        "tag" : "Role"
+      }, {
+        "amount" : "43,25",
+        "description" : "Comemoracao",
+        "tag" : "Role"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "4,5",
+        "description" : "quindim",
+        "tag" : "Comida"
+      }, {
+        "amount" : "BU",
+        "description" : "$20.00",
+        "tag" : "saque"
+      }, {
+        "amount" : "14,3",
+        "description" : "almoco fisica",
+        "tag" : "Comida"
+      }, {
+        "amount" : "28,7",
+        "description" : "pinga",
+        "tag" : "Role"
+      }, {
+        "amount" : "22,55",
+        "description" : "churras helo",
+        "tag" : "Role"
+      }, {
+        "amount" : "22,55",
+        "description" : "zdeli",
+        "tag" : "Comida"
+      }, {
+        "amount" : "$19.00",
+        "description" : "urucum",
+        "tag" : "Role"
+      }, {
+        "amount" : "$120.00",
+        "description" : "urubu",
+        "tag" : "BU"
+      }, {
+        "amount" : "$8.00",
+        "description" : "algado",
+        "tag" : "Comida"
+      }, {
+        "amount" : "38,07",
+        "description" : "remedio",
+        "tag" : "Compras"
+      }, {
+        "amount" : "44,69",
+        "description" : "pizza tcc",
+        "tag" : "Comida"
+      }, {
+        "amount" : "$14.00",
+        "description" : "almoco",
+        "tag" : "Comida"
+      }, {
+        "amount" : "$30.00",
+        "description" : "celular",
+        "tag" : "Compras"
+      }, {
+        "amount" : "$12.00",
+        "description" : "janra",
+        "tag" : "Comida"
+      }, {
+        "amount" : "$110.00",
+        "description" : "urubu",
+        "tag" : "BU"
+      }, {
+        "amount" : "19,5",
+        "description" : "pinga",
+        "tag" : "Role"
+      }, {
+        "amount" : "$45.00",
+        "description" : "sou",
+        "tag" : "Role"
+      }, {
+        "amount" : "32,01",
+        "description" : "gasosa",
+        "tag" : "Role"
+      }, {
+        "amount" : "$50.00",
+        "description" : "urubu",
+        "tag" : "BU"
+      } ]
+    } ], [ null, {
+      "debts" : [ {
+        "amount" : "$19.50",
+        "description" : "sweet parada",
+        "tag" : "Role"
+      }, {
+        "amount" : "BU",
+        "description" : "$110.00",
+        "tag" : "Roupas"
+      }, {
+        "amount" : "$32.01",
+        "description" : "posto",
+        "tag" : "Role"
+      }, {
+        "amount" : "$16.53",
+        "description" : "esfiha",
+        "tag" : "Comida"
+      }, {
+        "amount" : "$13.50",
+        "description" : "starbucks",
+        "tag" : "Comida"
+      }, {
+        "amount" : "$50.00",
+        "description" : "its tecnologia",
+        "tag" : "Compras"
+      }, {
+        "amount" : "$70.00",
+        "description" : "BU",
+        "tag" : "Bu"
+      }, {
+        "amount" : "$54.15",
+        "description" : "pao de acucar",
+        "tag" : "Role"
+      }, {
+        "amount" : "$48.00",
+        "description" : "meat chopper",
+        "tag" : "Role"
+      }, {
+        "amount" : "$11.70",
+        "description" : "galetetia",
+        "tag" : "Role"
+      }, {
+        "amount" : "$23.10",
+        "description" : "pelosini",
+        "tag" : "Role"
+      }, {
+        "amount" : "$76.89",
+        "description" : "charme",
+        "tag" : "Role"
+      }, {
+        "amount" : "$4.00",
+        "description" : "tarifa",
+        "tag" : "BU"
+      }, {
+        "amount" : "$49.55",
+        "description" : "charme e paulista",
+        "tag" : "Role"
+      }, {
+        "amount" : "$20.00",
+        "description" : "celular",
+        "tag" : "Compras"
+      }, {
+        "amount" : "$121.03",
+        "description" : "tantra",
+        "tag" : "Comida"
+      }, {
+        "amount" : "$32.08",
+        "description" : "galeteria",
+        "tag" : "Comida"
+      }, {
+        "amount" : "$17.00",
+        "description" : "lanche",
+        "tag" : "Comida"
+      }, {
+        "amount" : "$33.00",
+        "description" : "cerveja",
+        "tag" : "Role"
+      }, {
+        "amount" : "$30.91",
+        "description" : "demoro",
+        "tag" : "Role"
+      }, {
+        "amount" : "$100.00",
+        "description" : "teclado",
+        "tag" : "Compras"
+      }, {
+        "amount" : "$89.40",
+        "description" : "anonnovo",
+        "tag" : "Role"
+      }, {
+        "amount" : "$180.00",
+        "description" : "psicologa",
+        "tag" : "Compras"
+      } ]
+    } ] ],
+    "2017" : {
+      "1" : [ null, {
+        "debts" : [ {
+          "amount" : "$11.76",
+          "description" : "Carrefour",
+          "tag" : "Compras"
+        }, {
+          "amount" : "$31.34",
+          "description" : "Johny Rockets",
+          "tag" : "Comida"
+        }, {
+          "amount" : "$15.00",
+          "description" : "Celular",
+          "tag" : "Compras"
+        }, {
+          "amount" : "$33.00",
+          "description" : "CAbelo",
+          "tag" : "Compras"
+        }, {
+          "amount" : "$33.11",
+          "description" : "Açai",
+          "tag" : "Comida"
+        }, {
+          "amount" : "$11.40",
+          "description" : "Ofner",
+          "tag" : "Comida"
+        }, {
+          "amount" : "$14.08",
+          "description" : "CArerfour",
+          "tag" : "Compras"
+        }, {
+          "amount" : "$70.00",
+          "description" : "Sapato Renner",
+          "tag" : "Compras"
+        }, {
+          "amount" : "$6.00",
+          "description" : "Ingresse ",
+          "tag" : "Role"
+        }, {
+          "amount" : "$50.00",
+          "description" : "Teconlogia",
+          "tag" : "Compras"
+        }, {
+          "amount" : "$23.00",
+          "description" : "Mc",
+          "tag" : "Comida"
+        }, {
+          "amount" : "$20.00",
+          "description" : "CElular ",
+          "tag" : "Compras"
+        }, {
+          "amount" : "$1,136.03",
+          "description" : "Viagem",
+          "tag" : "Role"
+        } ]
+      } ],
+      "6" : {
+        "1" : {
+          "debts" : [ {
+            "amount" : "22,06",
+            "description" : "casa kadri",
+            "tag" : "comida"
+          }, {
+            "amount" : "8,50",
+            "description" : "sorvete",
+            "tag" : "comida"
+          }, {
+            "amount" : "31,80",
+            "description" : "bike burger",
+            "tag" : "comida"
+          }, {
+            "amount" : "22,50",
+            "description" : "antena",
+            "tag" : "role"
+          }, {
+            "amount" : "13,31",
+            "description" : "magnitudes",
+            "tag" : "comida"
+          }, {
+            "amount" : "19,44",
+            "description" : "casa kadri",
+            "tag" : "comida"
+          }, {
+            "amount" : "30",
+            "description" : "celular",
+            "tag" : "fixo"
+          }, {
+            "amount" : "16,45",
+            "description" : "magnitudes",
+            "tag" : "comida"
+          }, {
+            "amount" : "8,50",
+            "description" : "sorvete",
+            "tag" : "comida"
+          }, {
+            "amount" : "39",
+            "description" : "Conta Itauau",
+            "tag" : "fixo"
+          }, {
+            "amount" : "15",
+            "description" : "padaria consolação",
+            "tag" : "comida"
+          }, {
+            "amount" : "15",
+            "description" : "antena",
+            "tag" : "role"
+          }, {
+            "amount" : "10",
+            "description" : "misto quente BRF",
+            "tag" : "comida"
+          }, {
+            "amount" : "61,17",
+            "description" : "DARE",
+            "tag" : "outros"
+          }, {
+            "amount" : "5,50",
+            "description" : "sorvete",
+            "tag" : "comida"
+          }, {
+            "amount" : "11,66",
+            "description" : "magnitudes",
+            "tag" : "comida"
+          }, {
+            "amount" : "18",
+            "description" : "almoço",
+            "tag" : "comida"
+          }, {
+            "amount" : "84,90",
+            "description" : "tinta impressora",
+            "tag" : "compras"
+          }, {
+            "amount" : "19.06",
+            "description" : "casa kadri",
+            "tag" : "comida"
+          }, {
+            "amount" : "130",
+            "description" : "remedio",
+            "tag" : "compras"
+          }, {
+            "amount" : "26,21",
+            "description" : "happy hour",
+            "tag" : "role"
+          }, {
+            "amount" : "1800",
+            "description" : "aula piano",
+            "tag" : "compras"
+          }, {
+            "amount" : "500",
+            "description" : "divida maes",
+            "tag" : "outros"
+          } ]
+        },
+        "12" : {
+          "debts" : {
+            "-KmRWa_ZJLhkZHFBhrMn" : {
+              "amount" : 320,
+              "date" : "12-6-2017",
+              "description" : "Psicologa",
+              "tags" : [ [ "fixo" ] ]
+            },
+            "-KmRpdOGLWy-4DdVsPo1" : {
+              "amount" : "",
+              "date" : "",
+              "description" : "",
+              "tags" : ""
+            },
+            "-KmTZ8xPqgn_es9I0eGZ" : {
+              "amount" : 24.45,
+              "date" : "12-6-2017",
+              "description" : "Mineiro",
+              "tags" : [ [ "comida" ] ]
+            },
+            "-KmTzUO45GC4yTNqR4nv" : {
+              "amount" : "",
+              "date" : "",
+              "description" : "",
+              "tags" : ""
+            }
+          },
+          "summary" : {
+            "spendingPerCategories" : {
+              "tag" : 344.45
+            },
+            "totalCredit" : 0,
+            "totalDebit" : 344.45
+          }
+        },
+        "13" : {
+          "debts" : {
+            "-KmX7eLC-B25t92LwySG" : {
+              "amount" : 37,
+              "date" : "13-6-2017",
+              "description" : "Original burger",
+              "tags" : [ [ "comida" ] ]
+            },
+            "-KmZEwfLNAXHeaysvnf-" : {
+              "amount" : 10,
+              "date" : "13-6-2017",
+              "description" : "Subway",
+              "tags" : [ [ "comida" ] ]
+            },
+            "-KmZF2yoBNGm-7WmX5xU" : {
+              "amount" : 5,
+              "date" : "13-6-2017",
+              "description" : "Rosquinha",
+              "tags" : [ [ "comida" ] ]
+            }
+          },
+          "summary" : {
+            "spendingPerCategories" : {
+              "tag" : 52
+            },
+            "totalCredit" : 0,
+            "totalDebit" : 52
+          }
+        },
+        "14" : {
+          "debts" : {
+            "-KmbIv72sdJAfzJoBvk3" : {
+              "amount" : 40,
+              "date" : "14-6-2017",
+              "description" : "Engorda",
+              "tags" : [ [ "role" ] ]
+            },
+            "-Kmh1fCGsGIMlr-WRU2j" : {
+              "amount" : 70,
+              "date" : "14-6-2017",
+              "description" : "Joaquina",
+              "tags" : [ [ "role" ] ]
+            },
+            "-Kmh1r4g9D4lLkfuuGBC" : {
+              "amount" : 7.5,
+              "date" : "14-6-2017",
+              "description" : "Antena",
+              "tags" : [ [ "role" ] ]
+            }
+          },
+          "summary" : {
+            "spendingPerCategories" : {
+              "tag" : 117.5
+            },
+            "totalCredit" : 0,
+            "totalDebit" : 117.5
+          }
+        },
+        "16" : {
+          "debts" : {
+            "-Kmmo7Ciiwq3C-C3agRq" : {
+              "amount" : 39,
+              "date" : "16-6-2017",
+              "description" : "Almoço",
+              "tags" : [ [ "comida" ] ]
+            },
+            "-KmmoAcPisVZxJpnYmRl" : {
+              "amount" : 4.3,
+              "date" : "16-6-2017",
+              "description" : "Metra",
+              "tags" : [ [ "transporte" ] ]
+            }
+          },
+          "summary" : {
+            "spendingPerCategories" : {
+              "tag" : 43.3
+            },
+            "totalCredit" : 0,
+            "totalDebit" : 43.3
+          }
+        },
+        "17" : {
+          "debts" : {
+            "-Kmr0JB5DrtovXbDtNtX" : {
+              "amount" : 7.5,
+              "date" : "17-6-2017",
+              "description" : "cerveja",
+              "tags" : [ [ "role" ] ]
+            },
+            "-Kmr0LL4SupP3bowWg_W" : {
+              "amount" : 30,
+              "date" : "17-6-2017",
+              "description" : "trackerz",
+              "tags" : [ [ "role" ] ]
+            }
+          },
+          "summary" : {
+            "spendingPerCategories" : {
+              "tag" : 37.5
+            },
+            "totalCredit" : 0,
+            "totalDebit" : 37.5
+          }
+        },
+        "summary" : {
+          "spendingPerCategories" : {
+            "tag" : 158.3
+          },
+          "totalCredit" : 0,
+          "totalDebit" : 158.3
+        }
+      },
+      "summary" : {
+        "spendingPerCategories" : {
+          "tag" : 158.3
+        },
+        "totalCredit" : 0,
+        "totalDebit" : 158.3
+      }
+    }
+  }
+}
