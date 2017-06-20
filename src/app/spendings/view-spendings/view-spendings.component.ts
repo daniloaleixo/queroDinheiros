@@ -13,6 +13,7 @@ import { ISettings } from '../../shared/interfaces';
 export class ViewSpendingsComponent implements OnInit {
 
   summary: ISettings;
+  hasLeft: number;
 
 	constructor(private layout: LayoutService,
               private currentMonthService: CurrentMonthService,
@@ -20,7 +21,14 @@ export class ViewSpendingsComponent implements OnInit {
 		this.layout.turnOnTabs();
     this.summary = {};
     this.currentMonthService.currentSummary
-    .subscribe((summary: ISettings) => this.summary = summary);
+    .subscribe((summary: ISettings) => {
+	this.summary = summary;
+	if (this.summary) {
+	  this.hasLeft = this.summary.currentSalary;
+	  if (this.summary.totalDebit) this.hasLeft -= this.summary.totalDebit;
+	  if (this.summary.totalCredit) this.hasLeft -= this.summary.totalCredit;
+	}
+    });
 	}
 
 	ngOnInit() {
