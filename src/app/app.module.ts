@@ -24,6 +24,7 @@ import { MaterializeModule } from 'angular2-materialize';
 
 
 import { CurrentMonthService } from './shared/singletons/current-month.service';
+import { DatabaseSnapshotService } from './shared/singletons/database-snapshot.service';
 
 
 @NgModule({
@@ -46,7 +47,7 @@ import { CurrentMonthService } from './shared/singletons/current-month.service';
     InvestmentsModule,
     AuthModule
   ],
-  providers: [AuthService, LayoutService, CurrentMonthService],
+  providers: [AuthService, LayoutService, CurrentMonthService, DatabaseSnapshotService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

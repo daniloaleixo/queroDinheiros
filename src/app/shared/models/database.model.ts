@@ -1,23 +1,32 @@
 export interface Database {
-	[year: number]: Array<MonthSpendings>;
+	snapshot: YearSpendings;
+}
+
+export function createDatabase(): Database {
+	const db: Database = {
+		snapshot: null
+	};
+	return db;
+}
+
+export interface YearSpendings {
+	[year: string]: MonthSpendings;	
 }
 
 export interface MonthSpendings {
-	[month: number]: Array<DaySpendings>;
+	[month: string]: DaySpendings;
 }
 
 export interface DaySpendings {
-	[day: number]: {
+	[day: string]: {
 		debts: Array<Spending>;
 		investiments: any;
 	};
 }
 
 export interface Spending {
-	[key: string]: {
-		amount: number;
-		date: string;
-		description: string;
-		tags: Array<string>;
-	};
+	amount: number;
+	date: string;
+	description: string;
+	tags: Array<string>;
 }
