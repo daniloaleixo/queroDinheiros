@@ -2,7 +2,7 @@ import { TestBed, inject } from '@angular/core/testing';
 
 import { DatabaseSnapshotService } from './database-snapshot.service';
 
-describe('DatabaseSnapshotService', () => {
+xdescribe('DatabaseSnapshotService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [DatabaseSnapshotService]
