@@ -4,6 +4,7 @@ import { AddSpendingComponent } from './spendings/add-spending/add-spending.comp
 import { ViewSpendingsComponent } from './spendings/view-spendings/view-spendings.component';
 import { LoginPageComponent } from './auth/login-page/login-page.component';
 import { SettingsComponent } from './settings/settings.component';
+import { HistoryComponent } from './history/history.component';
 import { HomeComponent } from './home.component';
 
 export const appRoutes: Routes = [
@@ -30,6 +31,10 @@ export const appRoutes: Routes = [
 			{
 				path: 'settings',
 				component: SettingsComponent
+			},
+			{
+				path: 'history',
+				component: HistoryComponent
 			}
 		],
 		component: HomeComponent

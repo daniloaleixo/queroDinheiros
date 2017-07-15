@@ -19,6 +19,11 @@ export class HeaderComponent implements OnInit {
   public userInfo: firebase.User;
   menuOptions: any = [
     {
+      description: 'Histórico',
+      link: '/history',
+      icon: 'query_builder'
+    },
+    {
       description: 'Configurações',
       link: '/settings',
       icon: 'build'

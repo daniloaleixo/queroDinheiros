@@ -1,0 +1,37 @@
+ <div id="test1" class="col s12">
+  	<div class="row">
+  	    <form class="col s12">
+  	    	<div style="margin-top:20px;"></div>
+  	    	<div class="row">
+  	    		<div class="col s12">
+  					<h5>Histórico</h5>
+  	    		</div>
+  	    	</div>
+
+  	    	<p *ngIf="!spendingHistory.length">
+  	    		Desculpe você ainda não tem nada cadastrado
+  	    	</p>
+
+					<table *ngIf="spendingHistory.length">
+		        <thead>
+		          <tr>
+		              <th>Data</th>
+		              <th>Valor</th>
+		              <th>Descrição</th>
+		              <th>Tags</th>
+		          </tr>
+		        </thead>
+		        <tbody>
+		          <tr *ngFor="let spending of spendingHistory">
+		            <td>{{ spending.date }}</td>
+		            <td>{{ spending.amount | currency:'BRL':true }}</td>
+		            <td>{{ spending.description }}</td>
+		            <td>{{ spending.tags.join(', ') }}</td>
+		          </tr>
+		        </tbody>
+		    </table>
+            
+
+  	    </form>
+  	  </div>
+  </div>
