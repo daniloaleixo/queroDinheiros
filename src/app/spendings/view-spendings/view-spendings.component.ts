@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { LayoutService } from '../../shared/layout/layout.service';
+import { LayoutService } from '../../shared/singletons/layout.service';
 import { ServerCommService } from '../../shared/services/server-comm.service';
-import { CurrentMonthService } from '../../singletons/current-month.service';
-import { ISettings } from '../../shared/interfaces';
+import { CurrentMonthService } from '../../shared/singletons/current-month.service';
+import { ISettings } from '../../shared/models/interfaces.model';
 
 @Component({
   selector: 'app-view-spendings',

@@ -12,7 +12,7 @@ import { SettingsModule } from './settings/settings.module';
 import { AuthModule } from './auth/auth.module';
 import { HomeComponent } from './home.component';
 import { AuthService } from './auth/auth.service';
-import { LayoutService } from './shared/layout/layout.service';
+import { LayoutService } from './shared/singletons/layout.service';
 
 import { appRoutes } from './app.routes';
 
@@ -23,7 +23,7 @@ import { environment } from '../environments/environment';
 import { MaterializeModule } from 'angular2-materialize';
 
 
-import { CurrentMonthService } from './singletons/current-month.service';
+import { CurrentMonthService } from './shared/singletons/current-month.service';
 
 
 @NgModule({

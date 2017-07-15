@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import * as firebase from 'firebase/app';
-import {} from 'materialize';
 import { MaterializeDirective, MaterializeAction } from 'angular2-materialize';
 import { Router } from '@angular/router';
 

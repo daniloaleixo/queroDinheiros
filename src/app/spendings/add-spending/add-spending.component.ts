@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 import { MaterializeDirective, MaterializeAction } from 'angular2-materialize';
-import { LayoutService } from '../../shared/layout/layout.service';
+import { LayoutService } from '../../shared/singletons/layout.service';
 
 
 import { IMyDpOptions } from 'mydatepicker';
 import { UtilsService } from '../../shared/services/utils.service';
-import { IAddSpending, IDatepicker, IFormAddSpending } from '../../shared/interfaces';
+import { IAddSpending, IDatepicker, IFormAddSpending } from '../../shared/models/interfaces.model';
 import { SpendingsService } from '../spendings.service';
 import { ServerCommService } from '../../shared/services/server-comm.service';
 

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './layout/header/header.component';
+import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
-import { LoadingComponent } from './layout/loading/loading.component';
+import { LoadingComponent } from './components/loading/loading.component';
 import { MaterializeModule } from 'angular2-materialize';
 import { UtilsService } from './services/utils.service';
 import { SpendingsService } from '../spendings/spendings.service';

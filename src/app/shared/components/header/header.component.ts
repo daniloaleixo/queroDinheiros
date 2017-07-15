@@ -3,7 +3,7 @@ import { Router, NavigationEnd } from '@angular/router';
 
 import { trigger, state, animate, transition, style  } from '@angular/core';
 import { MaterializeAction, MaterializeDirective } from 'angular2-materialize';
-import { LayoutService } from '../layout.service';
+import { LayoutService } from '../../singletons/layout.service';
 import { AuthService } from '../../../auth/auth.service';
 import * as firebase from 'firebase/app';
 

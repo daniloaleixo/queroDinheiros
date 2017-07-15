@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { ServerCommService } from '../shared/services/server-comm.service';
-import { ISettings } from '../shared/interfaces';
+import { ServerCommService } from '../services/server-comm.service';
+import { ISettings } from '../models/interfaces.model';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()

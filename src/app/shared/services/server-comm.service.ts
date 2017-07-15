@@ -5,10 +5,10 @@ import {
   FirebaseListObservable
 } from 'angularfire2/database';
 
-import { IDatepicker, ISettings, IAddSpending, IFormAddSpending } from '../interfaces';
+import { IDatepicker, ISettings, IAddSpending, IFormAddSpending } from '../models/interfaces.model';
 import { UtilsService } from './utils.service';
 import { AuthService } from '../../auth/auth.service';
-import { LayoutService } from '../layout/layout.service';
+import { LayoutService } from '../singletons/layout.service';
 import { SpendingsService } from '../../spendings/spendings.service';
 import { BackgroundTasksService } from './background-tasks.service';
 

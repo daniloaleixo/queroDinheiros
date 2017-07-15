@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { IDatepicker } from '../shared/interfaces';
+import { IDatepicker } from '../shared/models/interfaces.model';
 
 @Injectable()
 export class SpendingsService {

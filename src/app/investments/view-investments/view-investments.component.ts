@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { LayoutService } from '../../shared/layout/layout.service';
+import { LayoutService } from '../../shared/singletons/layout.service';
 
 @Component({
   selector: 'app-view-investments',

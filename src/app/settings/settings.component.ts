@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { MaterializeDirective, MaterializeAction } from 'angular2-materialize';
 
-import { LayoutService } from '../shared/layout/layout.service';
+import { LayoutService } from '../shared/singletons/layout.service';
 import { ServerCommService } from '../shared/services/server-comm.service';
 
 declare var Materialize: any;
