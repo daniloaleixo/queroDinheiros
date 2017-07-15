@@ -8,9 +8,9 @@ import { AuthService } from './auth/auth.service';
 				<router-outlet></router-outlet>`
 })
 
-// 
-// Home component is the root component, app component is above it 
-// 
+//
+// Home component is the root component, app component is above its
+//
 export class HomeComponent implements OnInit {
 
   	constructor(private authService: AuthService,

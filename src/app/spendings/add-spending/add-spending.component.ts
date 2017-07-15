@@ -10,6 +10,8 @@ import { IAddSpending, IDatepicker, IFormAddSpending } from '../../shared/models
 import { SpendingsService } from '../spendings.service';
 import { ServerCommService } from '../../shared/services/server-comm.service';
 
+import { ParentComponent } from '../../shared/models/parent-component.model';
+
 
 declare var Materialize: any;
 
@@ -19,7 +21,7 @@ declare var Materialize: any;
   styleUrls: ['./add-spending.component.scss'],
   providers: [UtilsService]
 })
-export class AddSpendingComponent implements OnInit {
+export class AddSpendingComponent extends ParentComponent implements OnInit {
 
   myDatePickerOptions: IMyDpOptions = {
     // other options...
@@ -27,19 +29,18 @@ export class AddSpendingComponent implements OnInit {
   };
 
   formData: IFormAddSpending; // Responsible for getting the info from the view
-  showLoading: boolean;
 
 	constructor(private layout: LayoutService,
               private utils: UtilsService,
               private serverCommService: ServerCommService,
               private spendingsService: SpendingsService) {
+    super();
     this.formData = {
       tags: '',
       amount: '',
       description: '',
       date: this.utils.getCurrentDate()
     };
-    this.showLoading = false;
     this.layout.turnOnTabs();
   }
 
