@@ -9,7 +9,8 @@ import * as firebase from 'firebase/app';
 
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html'
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
   sidenavActions;
@@ -18,6 +19,11 @@ export class HeaderComponent implements OnInit {
 
   public userInfo: firebase.User;
   menuOptions: any = [
+    {
+      description: 'Home',
+      link: '/',
+      icon: 'home'
+    },
     {
       description: 'Histórico',
       link: '/history',
