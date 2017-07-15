@@ -8,7 +8,7 @@ import { ISettings } from '../../shared/interfaces';
 @Component({
   selector: 'app-view-spendings',
   templateUrl: './view-spendings.component.html',
-  styleUrls: ['./view-spendings.component.css']
+  styleUrls: ['./view-spendings.component.scss']
 })
 export class ViewSpendingsComponent implements OnInit {
 

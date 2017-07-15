@@ -16,7 +16,7 @@ declare var Materialize: any;
 @Component({
   selector: 'app-add-spending',
   templateUrl: './add-spending.component.html',
-  styleUrls: ['./add-spending.component.css'],
+  styleUrls: ['./add-spending.component.scss'],
   providers: [UtilsService]
 })
 export class AddSpendingComponent implements OnInit {

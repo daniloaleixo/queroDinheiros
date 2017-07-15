@@ -5,7 +5,7 @@ import { LayoutService } from '../../shared/layout/layout.service';
 @Component({
   selector: 'app-view-investments',
   templateUrl: './view-investments.component.html',
-  styleUrls: ['./view-investments.component.css']
+  styleUrls: ['./view-investments.component.scss']
 })
 export class ViewInvestmentsComponent implements OnInit {
 
