@@ -2,17 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { AuthService } from './auth/auth.service';
 
-import { CurrentMonthService } from './singletons/current-month.service';
-
 @Component({
   selector: 'app-home',
   template: `<app-header></app-header>
 				<router-outlet></router-outlet>`
 })
+
+// 
+// Home component is the root component, app component is above it 
+// 
 export class HomeComponent implements OnInit {
 
   	constructor(private authService: AuthService,
-                private currentMonthService: CurrentMonthService,
                 private router: Router) {
   		this.authService.user.subscribe(
   			(auth) => {
