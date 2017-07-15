@@ -31,7 +31,7 @@ export class DatabaseSnapshotService {
   		.filter((db: Database) => db != null && db.snapshot != null)
   		.subscribe((db: Database) => {
   		// console.log('Database', db);
-  		// console.log('Entrando', db.snapshot);
+  		console.log('Entrando', db.snapshot);
   		// console.log('Entrando', db.snapshot['2017']);
   		// console.log('Entrando', db.snapshot['2017']['5']);
   		// console.log('Entrando', db.snapshot['2017']['5']['2']);

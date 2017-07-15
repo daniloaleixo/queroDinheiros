@@ -2,11 +2,14 @@ import { Injectable } from '@angular/core';
 import { IAddSpending, ISummary } from '../models/interfaces.model';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 
+import { Database, YearSpendings } from '../models/database.model';
+
 @Injectable()
 export class BackgroundTasksService {
 
   	constructor(private db: AngularFireDatabase) { }
 
+    // DEPRECATED 
   	public updateSummary(uid: string, year: string,	month: string,
   						day: string, amount: number, tags: string[]): void {
 
@@ -26,6 +29,8 @@ export class BackgroundTasksService {
   			yearSummaryRef.set(this.createObjectToUpdate(snapshot, amount, tags));
   		});
   	}
+
+    // DEPRECATED 
 
   	// Sum all the info to summary and return it to be updated
   	private createObjectToUpdate(snapshot, amount: number, tags: string[]): ISummary {
@@ -66,5 +71,15 @@ export class BackgroundTasksService {
 
   		return info;
   	}
+
+    updateSpendingSummaries(db: Database): void {
+      if(db.spendings) {
+        if(Object.keys(db.spendings)) {
+          Object.keys(db.spendings).forEach(year => {
+            let yearSpending = 0;
+          });
+         }
+      }
+    }
 
 }
