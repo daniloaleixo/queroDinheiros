@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import { IAddSpending, ISummary } from '../models/interfaces.model';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 
-import { Database, YearSpendings } from '../models/database.model';
-
 @Injectable()
 export class BackgroundTasksService {
 
@@ -72,7 +70,7 @@ export class BackgroundTasksService {
   		return info;
   	}
 
-    updateSpendingSummaries(db: Database): void {
+    updateSpendingSummaries(db): void {
       if(db.spendings) {
         if(Object.keys(db.spendings)) {
           Object.keys(db.spendings).forEach(year => {

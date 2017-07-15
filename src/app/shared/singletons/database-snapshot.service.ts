@@ -13,10 +13,10 @@ import {
 @Injectable()
 export class DatabaseSnapshotService {
 
-	public databaseSnapshot: BehaviorSubject<Database>;
+	public databaseSnapshot: BehaviorSubject<any>;
 
   constructor(private auth: AuthService, private db: AngularFireDatabase) {
-  	this.databaseSnapshot = new BehaviorSubject<Database>(createDatabase());
+  	this.databaseSnapshot = new BehaviorSubject<any>(createDatabase());
 
   	// I have to wait till user is logged to start
   	this.auth.uid
