@@ -1,3 +1,11 @@
+
+<div style="margin-top: 20px;"></div>
+
+<div *ngIf="showChart" 
+		id="pie_chart" [chartData]="pie_ChartData" 
+		[chartOptions] = "pie_ChartOptions" 
+		chartType="PieChart" appGoogleChart></div>
+
 <p>
   <br> Gasto no mês: {{ databaseSummary?.currentMonth.totalDebit }}
   <br> Ainda tenho: {{ hasLeft }}

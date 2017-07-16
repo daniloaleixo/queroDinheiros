@@ -5,7 +5,7 @@ import { DatabaseSnapshotService } from '../../shared/singletons/database-snapsh
 import { UtilsService } from '../../shared/services/utils.service';
 
 import { Database } from '../../shared/models/database.model';
-import { IDatabaseSummary } from '../../shared/models/summaries.model';
+import { IDatabaseSummary, ISummaryCategorieHash } from '../../shared/models/summaries.model';
 
 @Component({
   selector: 'app-view-spendings',
@@ -17,6 +17,16 @@ export class ViewSpendingsComponent implements OnInit {
 	public databaseSummary: IDatabaseSummary;
 	public currentSalary: number;
 	public hasLeft: number;
+
+	public pie_ChartData = [];
+	public showChart = false;
+
+  public pie_ChartOptions  = {
+    title: 'My Daily Activities',
+    pieHole: 0.4,
+    chartArea: { left: 0, top: 0, width: '100%', height: '100%' },
+    legend: { position: 'none'}
+  };
 
 
 
@@ -46,6 +56,7 @@ export class ViewSpendingsComponent implements OnInit {
 		this.dbSnapshot.databaseSummary.subscribe((dbSummary: IDatabaseSummary) => {
     	this.databaseSummary = dbSummary;
 			this.calculateWhatHasLeft();
+			this.generateChart();
 		});
 	}
 
@@ -55,6 +66,21 @@ export class ViewSpendingsComponent implements OnInit {
 					this.databaseSummary.currentMonth.totalDebit +
 					this.databaseSummary.currentMonth.totalCredit;
 		}
+	}
+
+	generateChart() {
+    this.showChart = false;
+
+		this.pie_ChartData = [
+    ['Tag', 'Amount Spent']];
+
+		const currentMonthSpendingsTags: ISummaryCategorieHash =
+			this.databaseSummary.currentMonth.spendingPerCategories;
+
+		Object.keys(currentMonthSpendingsTags).forEach((tag: string) => {
+			this.pie_ChartData.push([tag, currentMonthSpendingsTags[tag]]);
+		});
+		this.showChart = true;
 	}
 
 	ngOnInit() {

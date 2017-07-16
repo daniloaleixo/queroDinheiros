@@ -7,6 +7,7 @@ import { MaterializeModule } from 'angular2-materialize';
 import { UtilsService } from './services/utils.service';
 import { SpendingsService } from '../spendings/spendings.service';
 import { BackgroundTasksService } from './services/background-tasks.service';
+import { GoogleChartsDirective } from './directives/google-charts.directive';
 
 @NgModule({
   imports: [
@@ -14,8 +15,8 @@ import { BackgroundTasksService } from './services/background-tasks.service';
     RouterModule,
     MaterializeModule
   ],
-  declarations: [HeaderComponent, LoadingComponent],
-  exports: [HeaderComponent, LoadingComponent],
+  declarations: [HeaderComponent, LoadingComponent, GoogleChartsDirective],
+  exports: [HeaderComponent, LoadingComponent, GoogleChartsDirective],
   providers: [UtilsService, SpendingsService, BackgroundTasksService]
 })
 export class SharedModule { }
