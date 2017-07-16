@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { IAddSpending, ISummary } from '../models/interfaces.model';
+import { IAddSpending } from '../models/spendings.model';
+import { ISummary } from '../models/summaries.model';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 
 import { Database } from '../models/database.model';

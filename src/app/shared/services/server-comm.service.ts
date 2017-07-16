@@ -5,7 +5,8 @@ import {
   FirebaseListObservable
 } from 'angularfire2/database';
 
-import { IDatepicker, ISettings, IAddSpending, IFormAddSpending } from '../models/interfaces.model';
+import { IDatepicker, IAddSpending, IInputAddSpending } from '../models/spendings.model';
+import { ISummary } from '../models/summaries.model';
 import { UtilsService } from './utils.service';
 import { AuthService } from '../../auth/auth.service';
 import { LayoutService } from '../singletons/layout.service';
@@ -90,7 +91,7 @@ export class ServerCommService {
   }
 
 
-  addSpending(formData: IFormAddSpending): Promise<string> {
+  addSpending(formData: IInputAddSpending): Promise<string> {
 
     return new Promise((resolve, reject) => {
 
@@ -128,7 +129,7 @@ export class ServerCommService {
     });
   }
 
-  getCurrentSummary(): Promise<ISettings> {
+  getCurrentSummary(): Promise<ISummary> {
     return new Promise((resolve, reject) => {
       this.auth.uid.subscribe((uid: string) => {
         if (uid) {

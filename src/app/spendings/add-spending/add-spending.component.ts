@@ -6,7 +6,7 @@ import { LayoutService } from '../../shared/singletons/layout.service';
 
 import { IMyDpOptions } from 'mydatepicker';
 import { UtilsService } from '../../shared/services/utils.service';
-import { IAddSpending, IDatepicker, IFormAddSpending } from '../../shared/models/interfaces.model';
+import { IAddSpending, IDatepicker, IInputAddSpending } from '../../shared/models/spendings.model';
 import { SpendingsService } from '../spendings.service';
 import { ServerCommService } from '../../shared/services/server-comm.service';
 
@@ -28,7 +28,7 @@ export class AddSpendingComponent extends ParentComponent implements OnInit {
     dateFormat: 'dd-mm-yyyy',
   };
 
-  formData: IFormAddSpending; // Responsible for getting the info from the view
+  formData: IInputAddSpending; // Responsible for getting the info from the view
 
 	constructor(private layout: LayoutService,
               private utils: UtilsService,

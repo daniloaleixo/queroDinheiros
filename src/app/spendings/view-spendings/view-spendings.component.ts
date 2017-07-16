@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { LayoutService } from '../../shared/singletons/layout.service';
 import { ServerCommService } from '../../shared/services/server-comm.service';
 import { CurrentMonthService } from '../../shared/singletons/current-month.service';
-import { ISettings } from '../../shared/models/interfaces.model';
+import { ISummary } from '../../shared/models/summaries.model';
 
 @Component({
   selector: 'app-view-spendings',
@@ -12,7 +12,7 @@ import { ISettings } from '../../shared/models/interfaces.model';
 })
 export class ViewSpendingsComponent implements OnInit {
 
-  summary: ISettings;
+  summary: ISummary;
   hasLeft: number;
 
 	constructor(private layout: LayoutService,
@@ -21,7 +21,7 @@ export class ViewSpendingsComponent implements OnInit {
 		this.layout.turnOnTabs();
     this.summary = {};
     this.currentMonthService.currentSummary
-    .subscribe((summary: ISettings) => {
+    .subscribe((summary: ISummary) => {
 	this.summary = summary;
 	if (this.summary) {
 	  this.hasLeft = this.summary.currentSalary;
