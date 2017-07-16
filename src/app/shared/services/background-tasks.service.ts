@@ -56,8 +56,9 @@ export class BackgroundTasksService {
       if (spendingArray) {
         spendingArray.forEach((spending: Spending) => {
           let myDate: Date;
-          if (spending.date) this.utils.transformDatabaseDate(spending.date);
-          if (myDate && myDate > from && myDate < to) {
+          if (spending.date) myDate = this.utils.transformDatabaseDate(spending.date);
+
+          if (myDate && myDate >= from && myDate <= to) {
             // Check if is a debit (> 0) or credit (<0)
             if (spending.amount > 0) summary.totalDebit += spending.amount;
             else summary.totalCredit += spending.amount;
@@ -74,6 +75,7 @@ export class BackgroundTasksService {
           }
         });
       }
+      console.log('toaqui', summary, from, to, spendingArray.length);
 
       return summary;
     }

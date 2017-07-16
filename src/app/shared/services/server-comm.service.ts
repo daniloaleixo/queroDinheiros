@@ -62,35 +62,6 @@ export class ServerCommService {
 	}
 
 
-  calculateMonthlySpent(): number {
-    let spentMonth = 0;
-
-    this.auth.uid.subscribe((uid: string) => {
-      if (uid) {
-        console.log(uid);
-        this.db.object(
-          `/${uid}/${this.dateObject.date.year}/${this.dateObject.date.month}`,
-        { preserveSnapshot: true })
-        .$ref.on('value', (snapshot) => {
-
-          Object.keys(snapshot.val()).forEach(day => {
-            if (day !== 'summary') {
-              Object.keys(snapshot.val()[day]['debts']).forEach(
-              spending => {
-                const spent: number =
-                  this.utils.transformCurrency((snapshot.val()[day]['debts'][spending]['amount']));
-                if (spent) spentMonth += spent;
-                console.log(spentMonth);
-              });
-            }
-          });
-        });
-      }
-    });
-    return spentMonth;
-  }
-
-
   addSpending(formData: IInputAddSpending): Promise<string> {
 
     return new Promise((resolve, reject) => {
@@ -125,20 +96,6 @@ export class ServerCommService {
             },
             (error: Error) => reject(Error('Erro ao salvar gasto')));
         } else reject(Error('Erro ao salvar gasto'));
-      });
-    });
-  }
-
-  getCurrentSummary(): Promise<ISummary> {
-    return new Promise((resolve, reject) => {
-      this.auth.uid.subscribe((uid: string) => {
-        if (uid) {
-          this.db.object(`${uid}/${this.dateObject.date.year}/${this.dateObject.date.month}/summary`)
-          .$ref.on('value', (snapshot) => {
-            console.log(snapshot.val());
-            resolve(snapshot.val());
-          });
-        }
       });
     });
   }

@@ -27,3 +27,30 @@ export interface ISummary {
 export interface ISpendingCategorieHash {
 	[tag: string]: number;
 }
+
+export interface IDatabaseSummary {
+	currentDay: ISummary;
+	currentMonth: ISummary;
+	currentYear: ISummary;
+}
+
+export function createDatabaseSummary() {
+	const dbSummary: IDatabaseSummary = {
+		currentDay: {
+			totalDebit: 0,
+			totalCredit: 0,
+			spendingPerCategories: {}
+		},
+		currentMonth: {
+			totalDebit: 0,
+			totalCredit: 0,
+			spendingPerCategories: {}
+		},
+		currentYear: {
+			totalDebit: 0,
+			totalCredit: 0,
+			spendingPerCategories: {}
+		}
+	}
+	return dbSummary;
+}

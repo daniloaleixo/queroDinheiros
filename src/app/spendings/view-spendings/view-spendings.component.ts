@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 import { LayoutService } from '../../shared/singletons/layout.service';
-import { ServerCommService } from '../../shared/services/server-comm.service';
-import { CurrentMonthService } from '../../shared/singletons/current-month.service';
-import { ISummary } from '../../shared/models/summaries.model';
+import { DatabaseSnapshotService } from '../../shared/singletons/database-snapshot.service';
+import { UtilsService } from '../../shared/services/utils.service';
+
+import { Database } from '../../shared/models/database.model';
+import { IDatabaseSummary } from '../../shared/models/summaries.model';
 
 @Component({
   selector: 'app-view-spendings',
@@ -12,23 +14,48 @@ import { ISummary } from '../../shared/models/summaries.model';
 })
 export class ViewSpendingsComponent implements OnInit {
 
-  summary: ISummary;
-  hasLeft: number;
+	public databaseSummary: IDatabaseSummary;
+	public currentSalary: number;
+	public hasLeft: number;
+
+
 
 	constructor(private layout: LayoutService,
-              private currentMonthService: CurrentMonthService,
-				      private server: ServerCommService) {
+							private utils: UtilsService, 
+							private dbSnapshot: DatabaseSnapshotService) {
 		this.layout.turnOnTabs();
-    this.summary = {};
-    this.currentMonthService.currentSummary
-    .subscribe((summary: ISummary) => {
-	this.summary = summary;
-	if (this.summary) {
-	  this.hasLeft = this.summary.currentSalary;
-	  if (this.summary.totalDebit) this.hasLeft -= this.summary.totalDebit;
-	  if (this.summary.totalCredit) this.hasLeft -= this.summary.totalCredit;
+		this.databaseSummary = null;
+		this.currentSalary = 0;
+		this.hasLeft = 0;
+
+
+		this.dbSnapshot.databaseSnapshot.subscribe((snapshot: Database) => {
+			console.log('cheguei aqui')
+			const todayDate: string = this.utils.transformDateToDatabaseDate(this.utils.todayEndDate);
+			try {
+				this.currentSalary = Number(snapshot
+					.snapshot[todayDate.split('-')[0]]
+					[todayDate.split('-')[1]]
+					['summary']
+					['currentSalary']);
+				this.calculateWhatHasLeft();
+			} catch(error) {
+				console.error('Deu problema ao tentar pegar o salario');
+				this.currentSalary = 0;
+			}
+		});
+		this.dbSnapshot.databaseSummary.subscribe((dbSummary: IDatabaseSummary) => {
+    	this.databaseSummary = dbSummary;
+			this.calculateWhatHasLeft();
+		});
 	}
-    });
+
+	calculateWhatHasLeft(): void {
+		if (this.databaseSummary) {
+			this.hasLeft = this.currentSalary - 
+					this.databaseSummary.currentMonth.totalDebit +
+					this.databaseSummary.currentMonth.totalCredit;
+		}
 	}
 
 	ngOnInit() {

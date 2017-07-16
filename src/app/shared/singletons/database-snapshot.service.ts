@@ -5,8 +5,11 @@ import 'rxjs/add/operator/filter';
 
 import { AuthService } from '../../auth/auth.service';
 import { BackgroundTasksService } from '../services/background-tasks.service';
+import { UtilsService } from '../services/utils.service';
+
 import { Database, createDatabase } from '../models/database.model';
 import { Spending } from '../models/spendings.model';
+import { IDatabaseSummary, createDatabaseSummary } from '../models/summaries.model';
 
 import {
   AngularFireDatabase,
@@ -19,15 +22,18 @@ export class DatabaseSnapshotService {
 
 	public databaseSnapshot: BehaviorSubject<any>;
 	public spendingArrayHistory: BehaviorSubject<Array<Spending>>;
+  public databaseSummary: BehaviorSubject<IDatabaseSummary>;
 
   constructor(private auth: AuthService,
   						private db: AngularFireDatabase,
+              private utils: UtilsService,
   						private backgroundTasks: BackgroundTasksService) {
   	this.databaseSnapshot = new BehaviorSubject<any>(createDatabase());
   	this.databaseSnapshot.publishReplay(1);
-
-  	this.spendingArrayHistory = new BehaviorSubject([]);
+  	this.spendingArrayHistory = new BehaviorSubject<Array<Spending>>([]);
   	this.spendingArrayHistory.publishReplay(1);
+    this.databaseSummary = new BehaviorSubject<IDatabaseSummary>(createDatabaseSummary());
+    this.databaseSummary.publishReplay(1);
 
   	// I have to wait till user is logged to start
   	this.auth.uid
@@ -40,14 +46,28 @@ export class DatabaseSnapshotService {
   	this.databaseSnapshot
   		.filter((snapshot) => snapshot != null && snapshot.snapshot != null)
   		.subscribe((snapshot: Database) => {
-  		// console.log('Database', snapshot);
-  		console.log('PEgando database snapshot', snapshot.snapshot);
-  		// console.log('Entrando', snapshot.snapshot['2017']);
-  		// console.log('Entrando', snapshot.snapshot['2017']['5']);
-  		// console.log('Entrando', snapshot.snapshot['2017']['5']['2']);
-  		// console.log('Entrando', snapshot.snapshot['2017']['5']['2'].debts);
-  		// console.log('Entrando', snapshot.snapshot['2017']['5']['2'].debts[0]);
+        // Recalculate spending array
+        this.spendingArrayHistory.next(this.backgroundTasks
+          .getSpendingArray(snapshot).reverse());
+
+      console.log('PEgando database snapshot', snapshot.snapshot);
   	});
+
+    // Listening to spendingArrayHistory, any change and I have to update the summary
+    this.spendingArrayHistory
+      .filter((array) => array != null && array.length > 0)
+      .subscribe((array: Spending[]) => {
+        const newSummary: IDatabaseSummary = {
+          currentDay: this.backgroundTasks.calculateSpendingOfPeriod(
+                this.utils.todayStartDate, this.utils.todayEndDate, array),
+          currentMonth: this.backgroundTasks.calculateSpendingOfPeriod(
+                this.utils.monthStartDate, this.utils.todayEndDate, array),
+          currentYear: this.backgroundTasks.calculateSpendingOfPeriod(
+                this.utils.yearStartedDate, this.utils.todayEndDate, array)
+        };
+        console.log('newSummaru', newSummary);
+        this.databaseSummary.next(newSummary);
+      });
 
   }
 
@@ -59,9 +79,6 @@ export class DatabaseSnapshotService {
   				snapshot: snapshot.val()
   			};
   			this.databaseSnapshot.next(mySnapshot);
-  			// Make spending array
-  			this.spendingArrayHistory.next(this.backgroundTasks
-  					.getSpendingArray(mySnapshot).reverse());
   		});
 
   }

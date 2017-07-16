@@ -16,7 +16,6 @@ import { HistoryModule } from './history/history.module';
 
 import { AuthService } from './auth/auth.service';
 import { LayoutService } from './shared/singletons/layout.service';
-import { CurrentMonthService } from './shared/singletons/current-month.service';
 import { DatabaseSnapshotService } from './shared/singletons/database-snapshot.service';
 
 import { appRoutes } from './app.routes';
@@ -51,7 +50,7 @@ import { MaterializeModule } from 'angular2-materialize';
     HistoryModule,
     AuthModule
   ],
-  providers: [AuthService, LayoutService, CurrentMonthService, DatabaseSnapshotService],
+  providers: [AuthService, LayoutService, DatabaseSnapshotService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -26,7 +26,7 @@
 		            <td>{{ spending.date }}</td>
 		            <td>{{ spending.amount | currency:'BRL':true }}</td>
 		            <td>{{ spending.description }}</td>
-		            <td>{{ spending.tags.join(', ') }}</td>
+		            <td>{{ spending.tags?.join(', ') }}</td>
 		          </tr>
 		        </tbody>
 		    </table>
