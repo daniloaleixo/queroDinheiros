@@ -5,13 +5,15 @@ import {
   FirebaseListObservable
 } from 'angularfire2/database';
 
-import { IDatepicker, IAddSpending, IInputAddSpending } from '../models/spendings.model';
+import { IDatepicker, Spending, IInputAddSpending } from '../models/spendings.model';
 import { ISummary } from '../models/summaries.model';
 import { UtilsService } from './utils.service';
 import { AuthService } from '../../auth/auth.service';
 import { LayoutService } from '../singletons/layout.service';
 import { SpendingsService } from '../../spendings/spendings.service';
 import { BackgroundTasksService } from './background-tasks.service';
+// These should not be here I have to take this out after refactoring addSpending
+import { DatabaseSnapshotService } from '../singletons/database-snapshot.service';
 
 
 
@@ -28,6 +30,7 @@ export class ServerCommService {
   constructor(private db: AngularFireDatabase,
               private layout: LayoutService,
               private auth: AuthService,
+              private dbSnapshots: DatabaseSnapshotService,
               private backgroundTasksService: BackgroundTasksService,
               private spendingsService: SpendingsService,
               private utils: UtilsService) {
@@ -66,12 +69,15 @@ export class ServerCommService {
 
     return new Promise((resolve, reject) => {
 
-      const sendData: IAddSpending = {
+      const sendData: Spending = {
         tags: this.spendingsService.validateTags(formData.tags),
         amount: this.spendingsService.validateAmount(formData.amount),
         description: this.spendingsService.validateDescription(formData.description),
         date: this.spendingsService.validateDate(formData.date)
       };
+
+      // These should not be here
+      this.dbSnapshots.addSpending(sendData);
 
 
       console.log('enviar pro server', sendData);

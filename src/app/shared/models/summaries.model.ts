@@ -51,6 +51,6 @@ export function createDatabaseSummary() {
 			totalCredit: 0,
 			spendingPerCategories: {}
 		}
-	}
+	};
 	return dbSummary;
 }

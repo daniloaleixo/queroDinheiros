@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { IAddSpending } from '../models/spendings.model';
 import { ISummary } from '../models/summaries.model';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 
@@ -48,7 +47,7 @@ export class BackgroundTasksService {
 
 
     calculateSpendingOfPeriod(from: Date, to: Date, spendingArray: Spending[]): ISummary {
-      let summary: ISummary = {
+      const summary: ISummary = {
         totalDebit: 0,
         totalCredit: 0,
         spendingPerCategories: {}
@@ -69,13 +68,12 @@ export class BackgroundTasksService {
                 if (summary.spendingPerCategories[tag])
                   summary.spendingPerCategories[tag] += spending.amount;
                 else
-                  summary.spendingPerCategories[tag] = spending.amount; 
+                  summary.spendingPerCategories[tag] = spending.amount;
               });
             }
           }
         });
       }
-      console.log('toaqui', summary, from, to, spendingArray.length);
 
       return summary;
     }

@@ -6,7 +6,7 @@ import { LayoutService } from '../../shared/singletons/layout.service';
 
 import { IMyDpOptions } from 'mydatepicker';
 import { UtilsService } from '../../shared/services/utils.service';
-import { IAddSpending, IDatepicker, IInputAddSpending } from '../../shared/models/spendings.model';
+import { IDatepicker, IInputAddSpending } from '../../shared/models/spendings.model';
 import { SpendingsService } from '../spendings.service';
 import { ServerCommService } from '../../shared/services/server-comm.service';
 
@@ -51,6 +51,8 @@ export class AddSpendingComponent extends ParentComponent implements OnInit {
     if (this.formData.tags && this.formData.amount) {
       this.showLoading = true;
 
+      // This should not be here, the component could not have access to server requests
+      // It should be done by a middleware, spending.services maybe
       this.serverCommService.addSpending(this.formData)
           .then(
               (res) => {

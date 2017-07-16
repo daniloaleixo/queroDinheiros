@@ -83,4 +83,10 @@ export class DatabaseSnapshotService {
 
   }
 
+  public addSpending(spending: Spending) {
+    const array: Spending[] = this.spendingArrayHistory.getValue();
+    array.unshift(spending);
+    this.spendingArrayHistory.next(array);
+  }
+
 }

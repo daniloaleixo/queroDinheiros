@@ -21,7 +21,7 @@ export class ViewSpendingsComponent implements OnInit {
 
 
 	constructor(private layout: LayoutService,
-							private utils: UtilsService, 
+							private utils: UtilsService,
 							private dbSnapshot: DatabaseSnapshotService) {
 		this.layout.turnOnTabs();
 		this.databaseSummary = null;
@@ -30,7 +30,6 @@ export class ViewSpendingsComponent implements OnInit {
 
 
 		this.dbSnapshot.databaseSnapshot.subscribe((snapshot: Database) => {
-			console.log('cheguei aqui')
 			const todayDate: string = this.utils.transformDateToDatabaseDate(this.utils.todayEndDate);
 			try {
 				this.currentSalary = Number(snapshot
@@ -39,7 +38,7 @@ export class ViewSpendingsComponent implements OnInit {
 					['summary']
 					['currentSalary']);
 				this.calculateWhatHasLeft();
-			} catch(error) {
+			} catch (error) {
 				console.error('Deu problema ao tentar pegar o salario');
 				this.currentSalary = 0;
 			}
@@ -52,7 +51,7 @@ export class ViewSpendingsComponent implements OnInit {
 
 	calculateWhatHasLeft(): void {
 		if (this.databaseSummary) {
-			this.hasLeft = this.currentSalary - 
+			this.hasLeft = this.currentSalary -
 					this.databaseSummary.currentMonth.totalDebit +
 					this.databaseSummary.currentMonth.totalCredit;
 		}
