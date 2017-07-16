@@ -21,9 +21,9 @@ export interface ISummary {
 	currentSalary?: number;
 	percentageSalaryInvested?: number;
 	surplus?: number;
-	spendingPerCategories?: any;
+	spendingPerCategories?: ISpendingCategorieHash;
 }
 
-export interface ISpendingCategorie {
+export interface ISpendingCategorieHash {
 	[tag: string]: number;
 }

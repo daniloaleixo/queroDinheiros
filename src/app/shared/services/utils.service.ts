@@ -22,5 +22,10 @@ export class UtilsService {
       return parseFloat(value.toString().replace(/,/g, '.'));
     }
 
+    transformDatabaseDate(date: string): Date {
+      const ddmmyyyy = date.split('-');
+      return new Date(Number(ddmmyyyy.pop()), Number(ddmmyyyy.pop()) - 1, Number(ddmmyyyy.pop()));
+    }
+
 }
 

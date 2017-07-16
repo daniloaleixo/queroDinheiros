@@ -3,15 +3,19 @@ import { IAddSpending } from '../models/spendings.model';
 import { ISummary } from '../models/summaries.model';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 
+import { UtilsService } from './utils.service';
+
 import { Database } from '../models/database.model';
 import { Spending } from '../models/spendings.model';
 
 @Injectable()
 export class BackgroundTasksService {
 
-    constructor(private db: AngularFireDatabase) { }
+    constructor(private db: AngularFireDatabase,
+                private utils: UtilsService) { }
 
-    // This function is really ugly, looks like spaghetti function
+    // The function will get all the spending in a gigantic array which will be sorted
+    // (This function is really ugly, looks like spaghetti function)
     getSpendingArray(db: Database): Array<Spending> {
 
       const spendingArray: Array<Spending> = [];
@@ -42,7 +46,41 @@ export class BackgroundTasksService {
       return spendingArray;
     }
 
-    // DEPRECATED
+
+    calculateSpendingOfPeriod(from: Date, to: Date, spendingArray: Spending[]): ISummary {
+      let summary: ISummary = {
+        totalDebit: 0,
+        totalCredit: 0,
+        spendingPerCategories: {}
+      };
+      if (spendingArray) {
+        spendingArray.forEach((spending: Spending) => {
+          let myDate: Date;
+          if (spending.date) this.utils.transformDatabaseDate(spending.date);
+          if (myDate && myDate > from && myDate < to) {
+            // Check if is a debit (> 0) or credit (<0)
+            if (spending.amount > 0) summary.totalDebit += spending.amount;
+            else summary.totalCredit += spending.amount;
+
+            // Add amount to each tag
+            if (spending.tags) {
+              spending.tags.forEach((tag: string) => {
+                if (summary.spendingPerCategories[tag])
+                  summary.spendingPerCategories[tag] += spending.amount;
+                else
+                  summary.spendingPerCategories[tag] = spending.amount; 
+              });
+            }
+          }
+        });
+      }
+
+      return summary;
+    }
+
+    // To BE REMOVED
+    // Once we have the whole db on the client will have to just update
+    // the database snapshot and it automatically update de db itself
     // I will take this out because these function is designed wrong
     // And we will no longer make these calls to db, will have on snapshot
     public updateSummary(uid: string, year: string,  month: string,
@@ -65,7 +103,7 @@ export class BackgroundTasksService {
       });
     }
 
-    // DEPRECATED
+    // TO BE REMOVED
 
     // Sum all the info to summary and return it to be updated
     private createObjectToUpdate(snapshot, amount: number, tags: string[]): ISummary {
