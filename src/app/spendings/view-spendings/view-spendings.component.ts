@@ -77,9 +77,10 @@ export class ViewSpendingsComponent implements OnInit {
 		const currentMonthSpendingsTags: ISummaryCategorieHash =
 			this.databaseSummary.currentMonth.spendingPerCategories;
 
-		Object.keys(currentMonthSpendingsTags).forEach((tag: string) => {
-			this.pie_ChartData.push([tag, currentMonthSpendingsTags[tag]]);
-		});
+		Object.keys(currentMonthSpendingsTags)
+		.filter(tag => currentMonthSpendingsTags[tag] > 0)
+		.forEach((tag: string) =>
+			this.pie_ChartData.push([tag, currentMonthSpendingsTags[tag]]));
 		this.showChart = true;
 	}
 
