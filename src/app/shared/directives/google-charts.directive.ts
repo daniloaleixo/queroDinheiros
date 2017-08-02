@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input, OnInit } from '@angular/core';
+import { Directive, ElementRef, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 
 declare const google: any;
@@ -13,9 +13,11 @@ export class GoogleChartsDirective implements OnInit {
   @Input('chartType') public chartType: string;
   @Input('chartOptions') public chartOptions: Object;
   @Input('chartData') public chartData: Object;
+  @Output('chartLoaded') public chartLoaded: EventEmitter<boolean>;
 
   constructor (public element: ElementRef) {
     this._element = this.element.nativeElement;
+    this.chartLoaded = new EventEmitter<boolean>();
   }
 
   ngOnInit() {
@@ -29,8 +31,7 @@ export class GoogleChartsDirective implements OnInit {
   }
 
   drawGraph (chartOptions, chartType, chartData, ele) {
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
+    google.charts.setOnLoadCallback(() => {
       let wrapper;
       wrapper = new google.visualization.ChartWrapper({
         chartType: chartType,
@@ -39,6 +40,7 @@ export class GoogleChartsDirective implements OnInit {
         containerId: ele.id
       });
       wrapper.draw();
-    };
+      this.chartLoaded.emit(true);
+    });
   }
 }

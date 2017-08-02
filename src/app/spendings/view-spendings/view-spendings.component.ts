@@ -7,6 +7,9 @@ import { UtilsService } from '../../shared/services/utils.service';
 import { Database } from '../../shared/models/database.model';
 import { IDatabaseSummary, ISummaryCategorieHash } from '../../shared/models/summaries.model';
 
+import { Observable } from 'rxjs/Observable';
+
+
 @Component({
   selector: 'app-view-spendings',
   templateUrl: './view-spendings.component.html',
@@ -18,8 +21,9 @@ export class ViewSpendingsComponent implements OnInit {
 	public currentSalary: number;
 	public hasLeft: number;
 
+	public chartReady = false;
+
 	public pie_ChartData = [];
-	public showChart = false;
 
   public pie_ChartOptions  = {
     title: 'My Daily Activities',
@@ -39,7 +43,10 @@ export class ViewSpendingsComponent implements OnInit {
 		this.hasLeft = 0;
 
 
-		this.dbSnapshot.databaseSnapshot.subscribe((snapshot: Database) => {
+
+		this.dbSnapshot.databaseSnapshot
+		.filter((snapshot: Database) => snapshot.snapshot != null)
+		.subscribe((snapshot: Database) => {
 			const todayDate: string = this.utils.transformDateToDatabaseDate(this.utils.todayEndDate);
 			try {
 				this.currentSalary = Number(snapshot
@@ -69,7 +76,6 @@ export class ViewSpendingsComponent implements OnInit {
 	}
 
 	generateChart() {
-    this.showChart = false;
 
 		this.pie_ChartData = [
     ['Tag', 'Amount Spent']];
@@ -81,7 +87,6 @@ export class ViewSpendingsComponent implements OnInit {
 		.filter(tag => currentMonthSpendingsTags[tag] > 0)
 		.forEach((tag: string) =>
 			this.pie_ChartData.push([tag, currentMonthSpendingsTags[tag]]));
-		this.showChart = true;
 	}
 
 	ngOnInit() {

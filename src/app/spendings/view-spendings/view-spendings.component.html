@@ -1,7 +1,14 @@
 
 <div style="margin-top: 20px;"></div>
 
-<div *ngIf="showChart" 
+
+<div *ngIf="!chartReady" id="wrapper" style="text-align: center">    
+    <div id="yourdiv" style="display: inline-block;">
+    	<md-spinner></md-spinner>
+    </div>
+</div>
+
+<div (chartLoaded)="chartReady = $event"
 		id="pie_chart" [chartData]="pie_ChartData" 
 		[chartOptions] = "pie_ChartOptions" 
 		chartType="PieChart" appGoogleChart></div>
@@ -10,9 +17,3 @@
   <br> Gasto no mês: {{ databaseSummary?.currentMonth.totalDebit }}
   <br> Ainda tenho: {{ hasLeft }}
 </p>
-
-
-<div *ngIf="showChart" 
-		id="pie_chart" [chartData]="pie_ChartData" 
-		[chartOptions] = "pie_ChartOptions" 
-		chartType="PieChart" appGoogleChart></div>
