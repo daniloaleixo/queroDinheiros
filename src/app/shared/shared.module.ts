@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
+
+import { MdTabsModule } from '@angular/material';
+
 import { LoadingComponent } from './components/loading/loading.component';
 import { MaterializeModule } from 'angular2-materialize';
 import { UtilsService } from './services/utils.service';
@@ -13,7 +16,8 @@ import { GoogleChartsDirective } from './directives/google-charts.directive';
   imports: [
     CommonModule,
     RouterModule,
-    MaterializeModule
+    MaterializeModule,
+    MdTabsModule
   ],
   declarations: [HeaderComponent, LoadingComponent, GoogleChartsDirective],
   exports: [HeaderComponent, LoadingComponent, GoogleChartsDirective],

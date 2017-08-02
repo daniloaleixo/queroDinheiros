@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+
+
+.mat-tab-links {
+	background-color: rgba(0, 60, 107, 0.8) !important;
+	display: flex !important;
+  justify-content: space-around !important;
+}
+
+.mat-ink-bar {
+  background-color: #fff;
+}

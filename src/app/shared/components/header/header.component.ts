@@ -36,6 +36,24 @@ export class HeaderComponent implements OnInit {
     }
   ];
 
+  tabsOptions: any = [
+    {
+      description: 'Adicionar',
+      link: '/spendings/add',
+      icon: ''
+    },
+    {
+      description: 'Gastos',
+      link: '/spendings/view',
+      icon: ''
+    },
+    {
+      description: 'Investimentos',
+      link: '/investments/view',
+      icon: ''
+    }
+  ];
+
   constructor(public layout: LayoutService,
               private auth: AuthService,
               private router: Router) {
