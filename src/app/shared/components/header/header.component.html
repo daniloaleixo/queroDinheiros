@@ -20,7 +20,8 @@
      *ngFor="let tab of tabsOptions"
      [routerLink]="tab.link"
      routerLinkActive #rla="routerLinkActive"
-     [active]="rla.isActive">
+     [active]="rla.isActive"
+     style="color: white;">
     {{tab.description}}
   </a>
 </span>
