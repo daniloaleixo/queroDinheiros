@@ -8,12 +8,32 @@
     </div>
 </div>
 
-<div (chartLoaded)="chartReady = $event"
+<div (chartLoaded)="chartReady = $event" style="margin-bottom: 20px;" 
 		id="pie_chart" [chartData]="pie_ChartData" 
 		[chartOptions] = "pie_ChartOptions" 
 		chartType="PieChart" appGoogleChart></div>
 
-<p>
-  <br> Gasto no mês: {{ databaseSummary?.currentMonth.totalDebit }}
-  <br> Ainda tenho: {{ hasLeft }}
-</p>
+<div class="row">
+	<div class="col s12">
+		<div class="example-card">
+			<div>
+				<div>
+			    <h5 style="margin-bottom: -20px;">Gasto no mês</h5>
+				</div>
+				<div>
+			    <p class="colored-number">{{ databaseSummary?.currentMonth.totalDebit | currency:'BRL':true }}</p>
+				</div>
+			</div>
+
+			<div>
+				<div>
+			    <h5 style="margin-bottom: -20px;">Ainda tenho</h5>
+				</div>
+				<div>
+			    <p class="colored-number">{{ hasLeft | currency:'BRL':true }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>

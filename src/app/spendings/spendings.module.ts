@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { MyDatePickerModule } from 'mydatepicker';
 
-import { MdProgressSpinnerModule } from '@angular/material';
+import { MdProgressSpinnerModule, MdCardModule } from '@angular/material';
 
 import { ServerCommService } from '../shared/services/server-comm.service';
 import { SpendingsService } from './spendings.service';
@@ -19,7 +19,8 @@ import { SpendingsService } from './spendings.service';
     SharedModule,
     BrowserModule,
     MyDatePickerModule,
-    MdProgressSpinnerModule
+    MdProgressSpinnerModule,
+    MdCardModule
   ],
   declarations: [AddSpendingComponent, ViewSpendingsComponent],
   providers: [ServerCommService, SpendingsService]
